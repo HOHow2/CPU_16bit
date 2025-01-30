@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1738162579" />
+    <testcase name="CPU_tb" classname="CPU_tb" file="/home/hong/Workplace/Verilog/Verification_files/CPU/CPU_tb.py" lineno="6" time="0.007241964340209961" sim_time_ns="1000.001" ratio_time="138084.22038860904" />
+  </testsuite>
+</testsuites>

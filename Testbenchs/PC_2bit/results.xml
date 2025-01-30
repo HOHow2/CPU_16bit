@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1738165685" />
+    <testcase name="test_counter_2bit_001" classname="PC_2bit_tb" file="/home/hong/miniconda3/envs/cocotb-env/lib/python3.9/site-packages/cocotb/regression.py" lineno="727" time="0.002900362014770508" sim_time_ns="100.001" ratio_time="34478.79936736539" />
+  </testsuite>
+</testsuites>

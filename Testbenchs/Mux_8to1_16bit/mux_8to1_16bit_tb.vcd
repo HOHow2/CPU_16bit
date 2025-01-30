@@ -1,0 +1,105 @@
+$date
+	Wed Jan 29 22:17:35 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module mux_8to1_16bit $end
+$var wire 16 ! aluout [15:0] $end
+$var wire 16 " din [15:0] $end
+$var wire 1 # din_enable $end
+$var wire 1 $ gout $end
+$var wire 16 % r0 [15:0] $end
+$var wire 16 & r1 [15:0] $end
+$var wire 16 ' r2 [15:0] $end
+$var wire 16 ( r3 [15:0] $end
+$var wire 16 ) r4 [15:0] $end
+$var wire 16 * r5 [15:0] $end
+$var wire 16 + r6 [15:0] $end
+$var wire 16 , r7 [15:0] $end
+$var wire 3 - rout [2:0] $end
+$var reg 16 . buswires [15:0] $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1010101010101010 .
+b0 -
+b101011001111000 ,
+b1001000110100 +
+b1111111111111111 *
+b1110111011101110 )
+b1101110111011101 (
+b1100110011001100 '
+b1011101110111011 &
+b1010101010101010 %
+0$
+0#
+b1000100010001 "
+b1010101111001101 !
+$end
+#2000
+b1011101110111011 .
+b1 -
+#4000
+b1100110011001100 .
+b10 -
+#6000
+b1101110111011101 .
+b11 -
+#8000
+b1110111011101110 .
+b100 -
+#10000
+b1111111111111111 .
+b101 -
+#12000
+b1001000110100 .
+b110 -
+#14000
+b101011001111000 .
+b111 -
+#16000
+b1010101111001101 .
+b0 -
+1$
+#18000
+b1 -
+#20000
+b10 -
+#22000
+b11 -
+#24000
+b100 -
+#26000
+b101 -
+#28000
+b110 -
+#30000
+b111 -
+#32000
+b1000100010001 .
+b0 -
+0$
+1#
+#34000
+b1 -
+#36000
+b10 -
+#38000
+b11 -
+#40000
+b100 -
+#42000
+b101 -
+#44000
+b110 -
+#46000
+b111 -
+#48001

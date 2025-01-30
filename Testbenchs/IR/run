@@ -1,0 +1,425 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2024  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.48+5 (git sha1 4581f75b0, g++ 13.3.0-6ubuntu2~24.04 -fPIC -O3)
+
+1. Executing Liberty frontend: sky130_fd_sc_hd__ff_100C_1v65.lib
+Imported 428 cell types from liberty file.
+
+2. Executing Verilog-2005 frontend: IR.v
+Parsing Verilog input from `IR.v' to AST representation.
+Generating RTLIL representation for module `\IR'.
+Successfully finished Verilog frontend.
+
+3. Generating Graphviz representation of design.
+Writing dot description to `/home/hong/.yosys_show.dot'.
+Dumping module IR to page 1.
+Exec: { test -f '/home/hong/.yosys_show.dot.pid' && fuser -s '/home/hong/.yosys_show.dot.pid' 2> /dev/null; } || ( echo $$ >&3; exec xdot '/home/hong/.yosys_show.dot'; ) 3> '/home/hong/.yosys_show.dot.pid' &
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1. Analyzing design hierarchy..
+Top module:  \IR
+
+4.2. Analyzing design hierarchy..
+Top module:  \IR
+Removed 0 unused modules.
+
+5. Generating Graphviz representation of design.
+Writing dot description to `/home/hong/.yosys_show.dot'.
+Dumping module IR to page 1.
+Exec: { test -f '/home/hong/.yosys_show.dot.pid' && fuser -s '/home/hong/.yosys_show.dot.pid' 2> /dev/null; } || ( echo $$ >&3; exec xdot '/home/hong/.yosys_show.dot'; ) 3> '/home/hong/.yosys_show.dot.pid' &
+
+6. Executing PROC pass (convert processes to netlists).
+
+6.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+6.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$IR.v:10$1 in module IR.
+Removed a total of 0 dead cases.
+
+6.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 0 assignments to connections.
+
+6.4. Executing PROC_INIT pass (extract init attributes).
+
+6.5. Executing PROC_ARST pass (detect async resets in processes).
+
+6.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~1 debug messages>
+
+6.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\IR.$proc$IR.v:10$1'.
+     1/1: $0\IR_out[8:0]
+
+6.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+6.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\IR.\IR_out' using process `\IR.$proc$IR.v:10$1'.
+  created $dff cell `$procdff$5' with positive edge clock.
+
+6.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+6.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\IR.$proc$IR.v:10$1'.
+Removing empty process `IR.$proc$IR.v:10$1'.
+Cleaned up 1 empty switch.
+
+6.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module IR.
+
+7. Generating Graphviz representation of design.
+Writing dot description to `/home/hong/.yosys_show.dot'.
+Dumping module IR to page 1.
+Exec: { test -f '/home/hong/.yosys_show.dot.pid' && fuser -s '/home/hong/.yosys_show.dot.pid' 2> /dev/null; } || ( echo $$ >&3; exec xdot '/home/hong/.yosys_show.dot'; ) 3> '/home/hong/.yosys_show.dot.pid' &
+
+8. Executing OPT pass (performing simple optimizations).
+
+8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module IR.
+
+8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\IR'.
+Removed a total of 0 cells.
+
+8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \IR..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~1 debug messages>
+
+8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \IR.
+Performed a total of 0 changes.
+
+8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\IR'.
+Removed a total of 0 cells.
+
+8.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$5 ($dff) from module IR (D = \din [8:0], Q = \IR_out).
+
+8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \IR..
+Removed 1 unused cells and 3 unused wires.
+<suppressed ~2 debug messages>
+
+8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module IR.
+
+8.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+8.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \IR..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+8.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \IR.
+Performed a total of 0 changes.
+
+8.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\IR'.
+Removed a total of 0 cells.
+
+8.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \IR..
+
+8.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module IR.
+
+8.16. Finished OPT passes. (There is nothing left to do.)
+
+9. Generating Graphviz representation of design.
+Writing dot description to `/home/hong/.yosys_show.dot'.
+Dumping module IR to page 1.
+Exec: { test -f '/home/hong/.yosys_show.dot.pid' && fuser -s '/home/hong/.yosys_show.dot.pid' 2> /dev/null; } || ( echo $$ >&3; exec xdot '/home/hong/.yosys_show.dot'; ) 3> '/home/hong/.yosys_show.dot.pid' &
+
+10. Executing FSM pass (extract and optimize FSM).
+
+10.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+10.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+10.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+10.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \IR..
+
+10.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+10.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+10.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+10.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+1 modules:
+  IR
+
+11. Generating Graphviz representation of design.
+Writing dot description to `/home/hong/.yosys_show.dot'.
+Dumping module IR to page 1.
+Exec: { test -f '/home/hong/.yosys_show.dot.pid' && fuser -s '/home/hong/.yosys_show.dot.pid' 2> /dev/null; } || ( echo $$ >&3; exec xdot '/home/hong/.yosys_show.dot'; ) 3> '/home/hong/.yosys_show.dot.pid' &
+
+12. Executing OPT pass (performing simple optimizations).
+
+12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module IR.
+
+12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\IR'.
+Removed a total of 0 cells.
+
+12.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \IR..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+12.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \IR.
+Performed a total of 0 changes.
+
+12.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\IR'.
+Removed a total of 0 cells.
+
+12.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+12.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \IR..
+
+12.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module IR.
+
+12.9. Finished OPT passes. (There is nothing left to do.)
+
+13. Generating Graphviz representation of design.
+Writing dot description to `/home/hong/.yosys_show.dot'.
+Dumping module IR to page 1.
+Exec: { test -f '/home/hong/.yosys_show.dot.pid' && fuser -s '/home/hong/.yosys_show.dot.pid' 2> /dev/null; } || ( echo $$ >&3; exec xdot '/home/hong/.yosys_show.dot'; ) 3> '/home/hong/.yosys_show.dot.pid' &
+
+14. Executing MEMORY pass.
+
+14.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+14.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+14.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+14.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+14.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+14.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \IR..
+
+14.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+14.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+14.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \IR..
+
+14.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+14.11. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+15. Generating Graphviz representation of design.
+Writing dot description to `/home/hong/.yosys_show.dot'.
+Dumping module IR to page 1.
+Exec: { test -f '/home/hong/.yosys_show.dot.pid' && fuser -s '/home/hong/.yosys_show.dot.pid' 2> /dev/null; } || ( echo $$ >&3; exec xdot '/home/hong/.yosys_show.dot'; ) 3> '/home/hong/.yosys_show.dot.pid' &
+
+16. Executing OPT pass (performing simple optimizations).
+
+16.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module IR.
+
+16.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\IR'.
+Removed a total of 0 cells.
+
+16.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \IR..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+16.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \IR.
+Performed a total of 0 changes.
+
+16.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\IR'.
+Removed a total of 0 cells.
+
+16.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+16.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \IR..
+
+16.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module IR.
+
+16.9. Finished OPT passes. (There is nothing left to do.)
+
+17. Generating Graphviz representation of design.
+Writing dot description to `/home/hong/.yosys_show.dot'.
+Dumping module IR to page 1.
+Exec: { test -f '/home/hong/.yosys_show.dot.pid' && fuser -s '/home/hong/.yosys_show.dot.pid' 2> /dev/null; } || ( echo $$ >&3; exec xdot '/home/hong/.yosys_show.dot'; ) 3> '/home/hong/.yosys_show.dot.pid' &
+
+18. Executing TECHMAP pass (map to technology primitives).
+
+18.1. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+18.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $dffe.
+No more expansions possible.
+<suppressed ~74 debug messages>
+
+19. Generating Graphviz representation of design.
+Writing dot description to `/home/hong/.yosys_show.dot'.
+Dumping module IR to page 1.
+Exec: { test -f '/home/hong/.yosys_show.dot.pid' && fuser -s '/home/hong/.yosys_show.dot.pid' 2> /dev/null; } || ( echo $$ >&3; exec xdot '/home/hong/.yosys_show.dot'; ) 3> '/home/hong/.yosys_show.dot.pid' &
+
+20. Executing OPT pass (performing simple optimizations).
+
+20.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module IR.
+
+20.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\IR'.
+Removed a total of 0 cells.
+
+20.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \IR..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+20.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \IR.
+Performed a total of 0 changes.
+
+20.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\IR'.
+Removed a total of 0 cells.
+
+20.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+20.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \IR..
+
+20.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module IR.
+
+20.9. Finished OPT passes. (There is nothing left to do.)
+
+21. Generating Graphviz representation of design.
+Writing dot description to `/home/hong/.yosys_show.dot'.
+Dumping module IR to page 1.
+Exec: { test -f '/home/hong/.yosys_show.dot.pid' && fuser -s '/home/hong/.yosys_show.dot.pid' 2> /dev/null; } || ( echo $$ >&3; exec xdot '/home/hong/.yosys_show.dot'; ) 3> '/home/hong/.yosys_show.dot.pid' &
+
+22. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_1 (noninv, pins=3, area=20.02) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtn_1 (noninv, pins=4, area=25.02) is a direct match for cell type $_DFF_NN0_.
+  cell sky130_fd_sc_hd__dfrtp_1 (noninv, pins=4, area=25.02) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__edfxtp_1 (noninv, pins=4, area=30.03) is a direct match for cell type $_DFFE_PP_.
+  cell sky130_fd_sc_hd__dfbbn_1 (noninv, pins=6, area=32.53) is a direct match for cell type $_DFFSR_NNN_.
+  cell sky130_fd_sc_hd__dfbbp_1 (noninv, pins=6, area=32.53) is a direct match for cell type $_DFFSR_PNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_1 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    \sky130_fd_sc_hd__dfrtn_1 _DFF_NN0_ (.CLK_N( C), .D( D), .Q( Q), .RESET_B( R));
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_1 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_2 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    unmapped dff cell: $_DFFE_NN_
+    unmapped dff cell: $_DFFE_NP_
+    unmapped dff cell: $_DFFE_PN_
+    \sky130_fd_sc_hd__edfxtp_1 _DFFE_PP_ (.CLK( C), .D( D), .DE( E), .Q( Q));
+    \sky130_fd_sc_hd__dfbbn_1 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    \sky130_fd_sc_hd__dfbbp_1 _DFFSR_PNN_ (.CLK( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+22.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+<suppressed ~24 debug messages>
+Mapping DFF cells in module `\IR':
+  mapped 9 $_DFFE_PP_ cells to \sky130_fd_sc_hd__edfxtp_1 cells.
+
+23. Generating Graphviz representation of design.
+Writing dot description to `/home/hong/.yosys_show.dot'.
+Dumping module IR to page 1.
+Exec: { test -f '/home/hong/.yosys_show.dot.pid' && fuser -s '/home/hong/.yosys_show.dot.pid' 2> /dev/null; } || ( echo $$ >&3; exec xdot '/home/hong/.yosys_show.dot'; ) 3> '/home/hong/.yosys_show.dot.pid' &
+
+24. Executing ABC pass (technology mapping using ABC).
+
+24.1. Extracting gate netlist of module `\IR' to `<abc-temp-dir>/input.blif'..
+Extracted 0 gates and 0 wires to a netlist network with 0 inputs and 0 outputs.
+Don't call ABC as there is nothing to map.
+Removing temp directory.
+
+25. Generating Graphviz representation of design.
+Writing dot description to `/home/hong/.yosys_show.dot'.
+Dumping module IR to page 1.
+Exec: { test -f '/home/hong/.yosys_show.dot.pid' && fuser -s '/home/hong/.yosys_show.dot.pid' 2> /dev/null; } || ( echo $$ >&3; exec xdot '/home/hong/.yosys_show.dot'; ) 3> '/home/hong/.yosys_show.dot.pid' &
+
+26. Generating Graphviz representation of design.
+Writing dot description to `/home/hong/.yosys_show.dot'.
+Dumping module IR to page 1.
+Exec: { test -f '/home/hong/.yosys_show.dot.pid' && fuser -s '/home/hong/.yosys_show.dot.pid' 2> /dev/null; } || ( echo $$ >&3; exec xdot '/home/hong/.yosys_show.dot'; ) 3> '/home/hong/.yosys_show.dot.pid' &
+
+End of script. Logfile hash: 299c302081, CPU: user 0.30s system 0.04s, MEM: 45.97 MB peak
+Yosys 0.48+5 (git sha1 4581f75b0, g++ 13.3.0-6ubuntu2~24.04 -fPIC -O3)
+Time spent: 30% 2x read_liberty (0 sec), 30% 1x dfflibmap (0 sec), ...

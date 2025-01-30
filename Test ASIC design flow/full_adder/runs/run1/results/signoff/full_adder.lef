@@ -1,0 +1,123 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO full_adder
+  CLASS BLOCK ;
+  FOREIGN full_adder ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 458.470 BY 245.475 ;
+  PIN VGND
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER met4 ;
+        RECT 24.340 10.640 25.940 234.160 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 177.940 10.640 179.540 234.160 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 331.540 10.640 333.140 234.160 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 30.030 452.880 31.630 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 183.210 452.880 184.810 ;
+    END
+  END VGND
+  PIN VPWR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER met4 ;
+        RECT 21.040 10.640 22.640 234.160 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 174.640 10.640 176.240 234.160 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 328.240 10.640 329.840 234.160 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 26.730 452.880 28.330 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 179.910 452.880 181.510 ;
+    END
+  END VPWR
+  PIN a
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.213000 ;
+    PORT
+      LAYER met2 ;
+        RECT 231.930 0.000 232.210 4.000 ;
+    END
+  END a
+  PIN b
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.213000 ;
+    PORT
+      LAYER met2 ;
+        RECT 228.710 0.000 228.990 4.000 ;
+    END
+  END b
+  PIN carry
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.445500 ;
+    PORT
+      LAYER met2 ;
+        RECT 222.270 0.000 222.550 4.000 ;
+    END
+  END carry
+  PIN cin
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.126000 ;
+    PORT
+      LAYER met2 ;
+        RECT 225.490 0.000 225.770 4.000 ;
+    END
+  END cin
+  PIN sum
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.445500 ;
+    PORT
+      LAYER met2 ;
+        RECT 235.150 0.000 235.430 4.000 ;
+    END
+  END sum
+  OBS
+      LAYER nwell ;
+        RECT 5.330 10.795 452.830 234.005 ;
+      LAYER li1 ;
+        RECT 5.520 10.795 452.640 234.005 ;
+      LAYER met1 ;
+        RECT 5.520 10.640 452.640 234.160 ;
+      LAYER met2 ;
+        RECT 21.070 4.280 333.110 234.105 ;
+        RECT 21.070 4.000 221.990 4.280 ;
+        RECT 222.830 4.000 225.210 4.280 ;
+        RECT 226.050 4.000 228.430 4.280 ;
+        RECT 229.270 4.000 231.650 4.280 ;
+        RECT 232.490 4.000 234.870 4.280 ;
+        RECT 235.710 4.000 333.110 4.280 ;
+      LAYER met3 ;
+        RECT 21.050 10.715 333.130 234.085 ;
+  END
+END full_adder
+END LIBRARY
+
