@@ -1,0 +1,152 @@
+Warning: sky130_fd_sc_hd__ff_100C_1v65.lib line 23, default_fanout_load is 0.0.
+Warning: ALU_constraints.sdc line 31, set_input_delay relative to a clock defined on the same port/pin not allowed.
+
+
+
+Units:
+ time 1ns
+ capacitance 1pF
+ resistance 1kohm
+ voltage 1v
+ current 1mA
+ power 1nW
+ distance 1um
+
+
+
+
+Check timing
+
+
+Warning: STA_ALU.tcl line 20, unknown field slew,.
+Warning: STA_ALU.tcl line 20, unknown field net,.
+Startpoint: sub (input port clocked by clk)
+Endpoint: reg_g/_03_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout       Cap     Delay      Time   Description
+----------------------------------------------------------------------------
+                    0.0000    0.0000   clock clk (rise edge)
+                    0.3000    0.3000   clock network delay (ideal)
+                    2.0000    2.3000 ^ input external delay
+    18    0.0774    0.0000    2.3000 ^ sub (in)
+                    0.0000    2.3000 ^ addsub/_090_/A (sky130_fd_sc_hd__xnor3_1)
+     3    0.0059    0.1889    2.4889 ^ addsub/_090_/X (sky130_fd_sc_hd__xnor3_1)
+                    0.0000    2.4889 ^ addsub/_092_/B (sky130_fd_sc_hd__or3b_1)
+     3    0.0073    0.1166    2.6055 ^ addsub/_092_/X (sky130_fd_sc_hd__or3b_1)
+                    0.0000    2.6055 ^ addsub/_098_/A2 (sky130_fd_sc_hd__a21oi_1)
+     2    0.0037    0.0639    2.6694 v addsub/_098_/Y (sky130_fd_sc_hd__a21oi_1)
+                    0.0000    2.6694 v addsub/_103_/B1 (sky130_fd_sc_hd__a21oi_1)
+     2    0.0064    0.0906    2.7600 ^ addsub/_103_/Y (sky130_fd_sc_hd__a21oi_1)
+                    0.0000    2.7600 ^ addsub/_110_/A1 (sky130_fd_sc_hd__o21ai_0)
+     2    0.0069    0.1379    2.8979 v addsub/_110_/Y (sky130_fd_sc_hd__o21ai_0)
+                    0.0000    2.8979 v addsub/_116_/B (sky130_fd_sc_hd__maj3_1)
+     2    0.0068    0.2646    3.1624 v addsub/_116_/X (sky130_fd_sc_hd__maj3_1)
+                    0.0000    3.1624 v addsub/_122_/B (sky130_fd_sc_hd__maj3_1)
+     2    0.0068    0.2559    3.4183 v addsub/_122_/X (sky130_fd_sc_hd__maj3_1)
+                    0.0000    3.4183 v addsub/_128_/B (sky130_fd_sc_hd__maj3_1)
+     2    0.0068    0.2559    3.6742 v addsub/_128_/X (sky130_fd_sc_hd__maj3_1)
+                    0.0000    3.6742 v addsub/_134_/B (sky130_fd_sc_hd__maj3_1)
+     2    0.0068    0.2559    3.9302 v addsub/_134_/X (sky130_fd_sc_hd__maj3_1)
+                    0.0000    3.9302 v addsub/_140_/B (sky130_fd_sc_hd__maj3_1)
+     2    0.0068    0.2559    4.1861 v addsub/_140_/X (sky130_fd_sc_hd__maj3_1)
+                    0.0000    4.1861 v addsub/_146_/B (sky130_fd_sc_hd__maj3_1)
+     2    0.0068    0.2559    4.4420 v addsub/_146_/X (sky130_fd_sc_hd__maj3_1)
+                    0.0000    4.4420 v addsub/_152_/B (sky130_fd_sc_hd__maj3_1)
+     2    0.0068    0.2559    4.6979 v addsub/_152_/X (sky130_fd_sc_hd__maj3_1)
+                    0.0000    4.6979 v addsub/_158_/B (sky130_fd_sc_hd__maj3_1)
+     2    0.0068    0.2559    4.9539 v addsub/_158_/X (sky130_fd_sc_hd__maj3_1)
+                    0.0000    4.9539 v addsub/_164_/B (sky130_fd_sc_hd__maj3_1)
+     2    0.0069    0.2568    5.2107 v addsub/_164_/X (sky130_fd_sc_hd__maj3_1)
+                    0.0000    5.2107 v addsub/_170_/B (sky130_fd_sc_hd__maj3_1)
+     2    0.0069    0.2570    5.4677 v addsub/_170_/X (sky130_fd_sc_hd__maj3_1)
+                    0.0000    5.4677 v addsub/_176_/B (sky130_fd_sc_hd__maj3_1)
+     1    0.0044    0.2398    5.7075 v addsub/_176_/X (sky130_fd_sc_hd__maj3_1)
+                    0.0000    5.7075 v addsub/_179_/A (sky130_fd_sc_hd__xnor2_1)
+     1    0.0045    0.1187    5.8262 v addsub/_179_/Y (sky130_fd_sc_hd__xnor2_1)
+                    0.0000    5.8262 v addsub/_180_/B (sky130_fd_sc_hd__xnor2_1)
+     1    0.0018    0.0976    5.9238 v addsub/_180_/Y (sky130_fd_sc_hd__xnor2_1)
+                    0.0000    5.9238 v reg_g/_03_/D (sky130_fd_sc_hd__edfxtp_1)
+                              5.9238   data arrival time
+
+                   10.0000   10.0000   clock clk (rise edge)
+                    0.3000   10.3000   clock network delay (ideal)
+                   -0.3000   10.0000   clock uncertainty
+                    0.0000   10.0000   clock reconvergence pessimism
+                             10.0000 ^ reg_g/_03_/CLK (sky130_fd_sc_hd__edfxtp_1)
+                   -0.1362    9.8638   library setup time
+                              9.8638   data required time
+----------------------------------------------------------------------------
+                              9.8638   data required time
+                             -5.9238   data arrival time
+----------------------------------------------------------------------------
+                              3.9399   slack (MET)
+
+
+Warning: STA_ALU.tcl line 21, unknown field slew,.
+Warning: STA_ALU.tcl line 21, unknown field net,.
+Startpoint: reg_a/_04_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: reg_g/_04_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout       Cap     Delay      Time   Description
+----------------------------------------------------------------------------
+                    0.0000    0.0000   clock clk (rise edge)
+                    0.3000    0.3000   clock network delay (ideal)
+                    0.0000    0.3000 ^ reg_a/_04_/CLK (sky130_fd_sc_hd__edfxtp_1)
+     4    0.0117    0.3907    0.6907 ^ reg_a/_04_/Q (sky130_fd_sc_hd__edfxtp_1)
+                    0.0000    0.6907 ^ addsub/_181_/B (sky130_fd_sc_hd__xor2_1)
+     1    0.0018    0.0585    0.7492 v addsub/_181_/X (sky130_fd_sc_hd__xor2_1)
+                    0.0000    0.7492 v reg_g/_04_/D (sky130_fd_sc_hd__edfxtp_1)
+                              0.7492   data arrival time
+
+                    0.0000    0.0000   clock clk (rise edge)
+                    0.3000    0.3000   clock network delay (ideal)
+                    0.3000    0.6000   clock uncertainty
+                    0.0000    0.6000   clock reconvergence pessimism
+                              0.6000 ^ reg_g/_04_/CLK (sky130_fd_sc_hd__edfxtp_1)
+                   -0.0942    0.5058   library hold time
+                              0.5058   data required time
+----------------------------------------------------------------------------
+                              0.5058   data required time
+                             -0.7492   data arrival time
+----------------------------------------------------------------------------
+                              0.2435   slack (MET)
+
+
+
+
+
+
+Check violators
+
+
+Group                                  Slack
+--------------------------------------------
+
+
+
+
+
+Power
+
+
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential           1.5456e-04 8.8779e-05 6.3861e-07 2.4398e-04  81.9%
+Combinational        2.9875e-05 2.3711e-05 4.1172e-07 5.3998e-05  18.1%
+Clock                0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00   0.0%
+Macro                0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00   0.0%
+Pad                  0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00   0.0%
+----------------------------------------------------------------
+Total                1.8444e-04 1.1249e-04 1.0503e-06 2.9797e-04 100.0%
+                          61.9%      37.8%       0.4%
+
+
+
+Clock                   Period          Waveform
+----------------------------------------------------
+clk                      10.00        0.00      5.00

@@ -1,0 +1,35 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2024  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.48+5 (git sha1 4581f75b0, g++ 13.3.0-6ubuntu2~24.04 -fPIC -O3)
+
+-- Running command `read_verilog IR_synthesized.v; stat' --
+
+1. Executing Verilog-2005 frontend: IR_synthesized.v
+Parsing Verilog input from `IR_synthesized.v' to AST representation.
+Generating RTLIL representation for module `\IR'.
+Successfully finished Verilog frontend.
+
+2. Printing statistics.
+
+=== IR ===
+
+   Number of wires:                  5
+   Number of wire bits:             36
+   Number of public wires:           5
+   Number of public wire bits:      36
+   Number of ports:                  4
+   Number of port bits:             27
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 18
+     BUF_X2                          9
+     sky130_fd_sc_hd__edfxtp_1       9
+
+End of script. Logfile hash: cab9d9fe56, CPU: user 0.01s system 0.00s, MEM: 13.76 MB peak
+Yosys 0.48+5 (git sha1 4581f75b0, g++ 13.3.0-6ubuntu2~24.04 -fPIC -O3)
+Time spent: 94% 2x read_verilog (0 sec), 5% 1x stat (0 sec)

@@ -1,0 +1,57 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2024  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.48+5 (git sha1 4581f75b0, g++ 13.3.0-6ubuntu2~24.04 -fPIC -O3)
+
+-- Running command `read_verilog CU_synthesized.v; stat' --
+
+1. Executing Verilog-2005 frontend: CU_synthesized.v
+Parsing Verilog input from `CU_synthesized.v' to AST representation.
+Generating RTLIL representation for module `\CU'.
+Successfully finished Verilog frontend.
+
+2. Printing statistics.
+
+=== CU ===
+
+   Number of wires:                221
+   Number of wire bits:            767
+   Number of public wires:          94
+   Number of public wire bits:     164
+   Number of ports:                 14
+   Number of port bits:             32
+   Number of memories:               4
+   Number of memory bits:          256
+   Number of processes:             30
+   Number of cells:                136
+     $logic_not                     19
+     $meminit_v2                    32
+     $memrd                          4
+     $print                          2
+     sky130_fd_sc_hd__a21oi_1        5
+     sky130_fd_sc_hd__a221oi_1       5
+     sky130_fd_sc_hd__a222oi_1       3
+     sky130_fd_sc_hd__a31oi_1        2
+     sky130_fd_sc_hd__and2_0         2
+     sky130_fd_sc_hd__and3_1         2
+     sky130_fd_sc_hd__and3b_1        7
+     sky130_fd_sc_hd__and4b_1        1
+     sky130_fd_sc_hd__clkinv_1       4
+     sky130_fd_sc_hd__lpflow_isobufsrc_1      2
+     sky130_fd_sc_hd__nand2_1       14
+     sky130_fd_sc_hd__nand2b_1       3
+     sky130_fd_sc_hd__nand3_1        4
+     sky130_fd_sc_hd__nand3b_1       1
+     sky130_fd_sc_hd__nor2_1         2
+     sky130_fd_sc_hd__nor3b_1        1
+     sky130_fd_sc_hd__o211ai_1       6
+     sky130_fd_sc_hd__o21ai_0       13
+     sky130_fd_sc_hd__o21ba_1        1
+     sky130_fd_sc_hd__o21bai_1       1
+
+End of script. Logfile hash: 2f588542ca, CPU: user 0.01s system 0.00s, MEM: 16.13 MB peak
+Yosys 0.48+5 (git sha1 4581f75b0, g++ 13.3.0-6ubuntu2~24.04 -fPIC -O3)
+Time spent: 98% 2x read_verilog (0 sec), 1% 1x stat (0 sec)

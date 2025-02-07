@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1738160772" />
+    <testcase name="ALU_16bit_tb_001" classname="ALU_16bit_tb" file="/home/hong/miniconda3/envs/cocotb-env/lib/python3.9/site-packages/cocotb/regression.py" lineno="727" time="0.0019457340240478516" sim_time_ns="101.001" ratio_time="51908.9447744149" />
+  </testsuite>
+</testsuites>

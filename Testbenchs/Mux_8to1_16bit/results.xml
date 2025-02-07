@@ -1,6 +1,0 @@
-<testsuites name="results">
-  <testsuite name="all" package="all">
-    <property name="random_seed" value="1738163855" />
-    <testcase name="mux_8to1_16bit_tb_001" classname="mux_8to1_16bit_tb" file="/home/hong/miniconda3/envs/cocotb-env/lib/python3.9/site-packages/cocotb/regression.py" lineno="727" time="0.0033969879150390625" sim_time_ns="48.001" ratio_time="14130.459454239191" />
-  </testsuite>
-</testsuites>

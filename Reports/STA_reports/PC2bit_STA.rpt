@@ -1,0 +1,3 @@
+Warning: sky130_fd_sc_hd__ff_100C_1v65.lib line 23, default_fanout_load is 0.0.
+Error: CU_synthesized.v line 102, syntax error
+% 

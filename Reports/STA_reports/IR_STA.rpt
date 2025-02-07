@@ -1,0 +1,112 @@
+Warning: sky130_fd_sc_hd__ff_100C_1v65.lib line 23, default_fanout_load is 0.0.
+
+
+
+Units:
+ time 1ns
+ capacitance 1pF
+ resistance 1kohm
+ voltage 1v
+ current 1mA
+ power 1nW
+ distance 1um
+
+
+
+
+Check timing
+
+
+Warning: STA_IR.tcl line 20, unknown field slew,.
+Warning: STA_IR.tcl line 20, unknown field net,.
+Startpoint: _0_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: IR_out[0] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout       Cap     Delay      Time   Description
+----------------------------------------------------------------------------
+                    0.0000    0.0000   clock clk (rise edge)
+                    0.0800    0.0800   clock network delay (ideal)
+                    0.0000    0.0800 ^ _0_/CLK (sky130_fd_sc_hd__edfxtp_1)
+     1    0.1000    0.7853    0.8653 ^ _0_/Q (sky130_fd_sc_hd__edfxtp_1)
+                    0.0000    0.8653 ^ IR_out[0] (out)
+                              0.8653   data arrival time
+
+                    2.0000    2.0000   clock clk (rise edge)
+                    0.0800    2.0800   clock network delay (ideal)
+                   -0.0800    2.0000   clock uncertainty
+                    0.0000    2.0000   clock reconvergence pessimism
+                   -0.8000    1.2000   output external delay
+                              1.2000   data required time
+----------------------------------------------------------------------------
+                              1.2000   data required time
+                             -0.8653   data arrival time
+----------------------------------------------------------------------------
+                              0.3347   slack (MET)
+
+
+Warning: STA_IR.tcl line 21, unknown field slew,.
+Warning: STA_IR.tcl line 21, unknown field net,.
+Startpoint: din[0] (input port clocked by clk)
+Endpoint: _0_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout       Cap     Delay      Time   Description
+----------------------------------------------------------------------------
+                    0.0000    0.0000   clock clk (rise edge)
+                    0.0800    0.0800   clock network delay (ideal)
+                    0.8000    0.8800 ^ input external delay
+     1    0.0019    0.0000    0.8800 ^ din[0] (in)
+                    0.0000    0.8800 ^ _0_/D (sky130_fd_sc_hd__edfxtp_1)
+                              0.8800   data arrival time
+
+                    0.0000    0.0000   clock clk (rise edge)
+                    0.0800    0.0800   clock network delay (ideal)
+                    0.0800    0.1600   clock uncertainty
+                    0.0000    0.1600   clock reconvergence pessimism
+                              0.1600 ^ _0_/CLK (sky130_fd_sc_hd__edfxtp_1)
+                   -0.0794    0.0806   library hold time
+                              0.0806   data required time
+----------------------------------------------------------------------------
+                              0.0806   data required time
+                             -0.8800   data arrival time
+----------------------------------------------------------------------------
+                              0.7994   slack (MET)
+
+
+
+
+
+
+Check violators
+
+
+Group                                  Slack
+--------------------------------------------
+
+
+
+
+
+Power
+
+
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential           1.9122e-04 9.1884e-05 1.7970e-07 2.8329e-04 100.0%
+Combinational        0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00   0.0%
+Clock                0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00   0.0%
+Macro                0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00   0.0%
+Pad                  0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00   0.0%
+----------------------------------------------------------------
+Total                1.9122e-04 9.1884e-05 1.7970e-07 2.8329e-04 100.0%
+                          67.5%      32.4%       0.1%
+
+
+
+Clock                   Period          Waveform
+----------------------------------------------------
+clk                       2.00        0.00      1.00

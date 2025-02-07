@@ -1,0 +1,185 @@
+Warning: sky130_fd_sc_hd__ff_100C_1v95.lib line 23, default_fanout_load is 0.0.
+
+
+
+Units:
+ time 1ns
+ capacitance 1pF
+ resistance 1kohm
+ voltage 1v
+ current 1mA
+ power 1nW
+ distance 1um
+
+
+
+
+Check timing
+
+
+Warning: STA_CPU.tcl line 20, unknown field slew,.
+Warning: STA_CPU.tcl line 20, unknown field net,.
+Startpoint: resetn (input port clocked by clk)
+Endpoint: ALU_16bit/reg_g/_15_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout       Cap     Delay      Time   Description
+----------------------------------------------------------------------------
+                    0.0000    0.0000   clock clk (rise edge)
+                    0.2000    0.2000   clock network delay (ideal)
+                    2.0000    2.2000 ^ input external delay
+     4    0.0101    0.0000    2.2000 ^ resetn (in)
+                    0.0000    2.2000 ^ Control_unit_module/_46_/B (sky130_fd_sc_hd__nand4_1)
+     5    0.0109    0.1011    2.3011 v Control_unit_module/_46_/Y (sky130_fd_sc_hd__nand4_1)
+                    0.0000    2.3011 v Control_unit_module/_66_/A1 (sky130_fd_sc_hd__o21ai_0)
+    24    0.0523    0.7556    3.0567 ^ Control_unit_module/_66_/Y (sky130_fd_sc_hd__o21ai_0)
+                    0.0000    3.0567 ^ Mux/_160_/C_N (sky130_fd_sc_hd__nor3b_1)
+    15    0.0380    0.5355    3.5922 ^ Mux/_160_/Y (sky130_fd_sc_hd__nor3b_1)
+                    0.0000    3.5922 ^ Mux/_168_/A2 (sky130_fd_sc_hd__a21oi_1)
+     1    0.0024    0.0395    3.6318 v Mux/_168_/Y (sky130_fd_sc_hd__a21oi_1)
+                    0.0000    3.6318 v Mux/_173_/A (sky130_fd_sc_hd__nand4_1)
+     1    0.0026    0.0669    3.6986 ^ Mux/_173_/Y (sky130_fd_sc_hd__nand4_1)
+                    0.0000    3.6986 ^ Mux/_175_/B1 (sky130_fd_sc_hd__a22o_1)
+    12    0.1279    0.6271    4.3257 ^ Mux/_175_/X (sky130_fd_sc_hd__a22o_1)
+                    0.0000    4.3257 ^ ALU_16bit/addsub/_090_/B (sky130_fd_sc_hd__xnor3_1)
+     3    0.0061    0.2031    4.5288 ^ ALU_16bit/addsub/_090_/X (sky130_fd_sc_hd__xnor3_1)
+                    0.0000    4.5288 ^ ALU_16bit/addsub/_092_/B (sky130_fd_sc_hd__or3b_1)
+     3    0.0075    0.0967    4.6255 ^ ALU_16bit/addsub/_092_/X (sky130_fd_sc_hd__or3b_1)
+                    0.0000    4.6255 ^ ALU_16bit/addsub/_098_/A2 (sky130_fd_sc_hd__a21oi_1)
+     2    0.0038    0.0519    4.6775 v ALU_16bit/addsub/_098_/Y (sky130_fd_sc_hd__a21oi_1)
+                    0.0000    4.6775 v ALU_16bit/addsub/_103_/B1 (sky130_fd_sc_hd__a21oi_1)
+     2    0.0066    0.0746    4.7521 ^ ALU_16bit/addsub/_103_/Y (sky130_fd_sc_hd__a21oi_1)
+                    0.0000    4.7521 ^ ALU_16bit/addsub/_110_/A1 (sky130_fd_sc_hd__o21ai_0)
+     2    0.0072    0.1110    4.8631 v ALU_16bit/addsub/_110_/Y (sky130_fd_sc_hd__o21ai_0)
+                    0.0000    4.8631 v ALU_16bit/addsub/_116_/B (sky130_fd_sc_hd__maj3_1)
+     2    0.0070    0.2076    5.0707 v ALU_16bit/addsub/_116_/X (sky130_fd_sc_hd__maj3_1)
+                    0.0000    5.0707 v ALU_16bit/addsub/_122_/B (sky130_fd_sc_hd__maj3_1)
+     2    0.0070    0.1992    5.2700 v ALU_16bit/addsub/_122_/X (sky130_fd_sc_hd__maj3_1)
+                    0.0000    5.2700 v ALU_16bit/addsub/_128_/B (sky130_fd_sc_hd__maj3_1)
+     2    0.0070    0.1992    5.4692 v ALU_16bit/addsub/_128_/X (sky130_fd_sc_hd__maj3_1)
+                    0.0000    5.4692 v ALU_16bit/addsub/_134_/B (sky130_fd_sc_hd__maj3_1)
+     2    0.0070    0.1992    5.6685 v ALU_16bit/addsub/_134_/X (sky130_fd_sc_hd__maj3_1)
+                    0.0000    5.6685 v ALU_16bit/addsub/_140_/B (sky130_fd_sc_hd__maj3_1)
+     2    0.0070    0.1992    5.8677 v ALU_16bit/addsub/_140_/X (sky130_fd_sc_hd__maj3_1)
+                    0.0000    5.8677 v ALU_16bit/addsub/_146_/B (sky130_fd_sc_hd__maj3_1)
+     2    0.0070    0.1992    6.0669 v ALU_16bit/addsub/_146_/X (sky130_fd_sc_hd__maj3_1)
+                    0.0000    6.0669 v ALU_16bit/addsub/_152_/B (sky130_fd_sc_hd__maj3_1)
+     2    0.0070    0.1992    6.2662 v ALU_16bit/addsub/_152_/X (sky130_fd_sc_hd__maj3_1)
+                    0.0000    6.2662 v ALU_16bit/addsub/_158_/B (sky130_fd_sc_hd__maj3_1)
+     2    0.0070    0.1992    6.4654 v ALU_16bit/addsub/_158_/X (sky130_fd_sc_hd__maj3_1)
+                    0.0000    6.4654 v ALU_16bit/addsub/_164_/B (sky130_fd_sc_hd__maj3_1)
+     2    0.0072    0.1999    6.6654 v ALU_16bit/addsub/_164_/X (sky130_fd_sc_hd__maj3_1)
+                    0.0000    6.6654 v ALU_16bit/addsub/_170_/B (sky130_fd_sc_hd__maj3_1)
+     2    0.0072    0.2001    6.8655 v ALU_16bit/addsub/_170_/X (sky130_fd_sc_hd__maj3_1)
+                    0.0000    6.8655 v ALU_16bit/addsub/_176_/B (sky130_fd_sc_hd__maj3_1)
+     1    0.0045    0.1861    7.0515 v ALU_16bit/addsub/_176_/X (sky130_fd_sc_hd__maj3_1)
+                    0.0000    7.0515 v ALU_16bit/addsub/_179_/A (sky130_fd_sc_hd__xnor2_1)
+     1    0.0046    0.0956    7.1472 v ALU_16bit/addsub/_179_/Y (sky130_fd_sc_hd__xnor2_1)
+                    0.0000    7.1472 v ALU_16bit/addsub/_180_/B (sky130_fd_sc_hd__xnor2_1)
+     1    0.0019    0.0809    7.2281 v ALU_16bit/addsub/_180_/Y (sky130_fd_sc_hd__xnor2_1)
+                    0.0000    7.2281 v ALU_16bit/reg_g/_15_/D (sky130_fd_sc_hd__edfxtp_1)
+                              7.2281   data arrival time
+
+                   10.0000   10.0000   clock clk (rise edge)
+                    0.2000   10.2000   clock network delay (ideal)
+                   -0.2000   10.0000   clock uncertainty
+                    0.0000   10.0000   clock reconvergence pessimism
+                             10.0000 ^ ALU_16bit/reg_g/_15_/CLK (sky130_fd_sc_hd__edfxtp_1)
+                   -0.1152    9.8848   library setup time
+                              9.8848   data required time
+----------------------------------------------------------------------------
+                              9.8848   data required time
+                             -7.2281   data arrival time
+----------------------------------------------------------------------------
+                              2.6567   slack (MET)
+
+
+Warning: STA_CPU.tcl line 21, unknown field slew,.
+Warning: STA_CPU.tcl line 21, unknown field net,.
+Startpoint: counter_2bit/_6_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: counter_2bit/_6_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout       Cap     Delay      Time   Description
+----------------------------------------------------------------------------
+                    0.0000    0.0000   clock clk (rise edge)
+                    0.2000    0.2000   clock network delay (ideal)
+                    0.0000    0.2000 ^ counter_2bit/_6_/CLK (sky130_fd_sc_hd__dfxtp_1)
+     9    0.0254    0.3245    0.5245 ^ counter_2bit/_6_/Q (sky130_fd_sc_hd__dfxtp_1)
+                    0.0000    0.5245 ^ counter_2bit/_3_/B (sky130_fd_sc_hd__nor2_1)
+     1    0.0018    0.0229    0.5474 v counter_2bit/_3_/Y (sky130_fd_sc_hd__nor2_1)
+                    0.0000    0.5474 v counter_2bit/_6_/D (sky130_fd_sc_hd__dfxtp_1)
+                              0.5474   data arrival time
+
+                    0.0000    0.0000   clock clk (rise edge)
+                    0.2000    0.2000   clock network delay (ideal)
+                    0.2000    0.4000   clock uncertainty
+                    0.0000    0.4000   clock reconvergence pessimism
+                              0.4000 ^ counter_2bit/_6_/CLK (sky130_fd_sc_hd__dfxtp_1)
+                   -0.0117    0.3883   library hold time
+                              0.3883   data required time
+----------------------------------------------------------------------------
+                              0.3883   data required time
+                             -0.5474   data arrival time
+----------------------------------------------------------------------------
+                              0.1591   slack (MET)
+
+
+
+
+
+
+Check violators
+
+
+Group                                  Slack
+--------------------------------------------
+
+Group                                    Slack
+----------------------------------------------
+clk                                     2.6567
+
+max slew
+
+Pin                                      Limit      Slew     Slack
+------------------------------------------------------------------
+Control_unit_module/_35_/Y              1.4981    1.4228    0.0753 (MET)
+
+max fanout
+
+Pin                                   Limit Fanout  Slack
+---------------------------------------------------------
+run                                      50      0     50 (MET)
+
+max capacitance
+
+Pin                                      Limit       Cap     Slack
+------------------------------------------------------------------
+Control_unit_module/_35_/Y              0.0833    0.0819    0.0014 (MET)
+
+
+
+
+
+Power
+
+
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential           1.0158e-03 2.1855e-06 5.2334e-06 1.0233e-03  95.0%
+Combinational        1.6636e-05 3.5258e-05 1.7957e-06 5.3690e-05   5.0%
+Clock                0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00   0.0%
+Macro                0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00   0.0%
+Pad                  0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00   0.0%
+----------------------------------------------------------------
+Total                1.0325e-03 3.7444e-05 7.0291e-06 1.0770e-03 100.0%
+                          95.9%       3.5%       0.7%
+
+
+
+Clock                   Period          Waveform
+----------------------------------------------------
+clk                      10.00        0.00      5.00

@@ -1,0 +1,50 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2024  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.48+5 (git sha1 4581f75b0, g++ 13.3.0-6ubuntu2~24.04 -fPIC -O3)
+
+-- Running command `read_verilog Mux_synthesized.v; stat' --
+
+1. Executing Verilog-2005 frontend: Mux_synthesized.v
+Parsing Verilog input from `Mux_synthesized.v' to AST representation.
+Generating RTLIL representation for module `\mux_8to1_16bit'.
+Successfully finished Verilog frontend.
+
+2. Printing statistics.
+
+=== mux_8to1_16bit ===
+
+   Number of wires:                150
+   Number of wire bits:            317
+   Number of public wires:         150
+   Number of public wire bits:     317
+   Number of ports:                 14
+   Number of port bits:            181
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                152
+     sky130_fd_sc_hd__a21oi_1       31
+     sky130_fd_sc_hd__a221o_1        1
+     sky130_fd_sc_hd__a221oi_1      15
+     sky130_fd_sc_hd__a22o_1        17
+     sky130_fd_sc_hd__a22oi_1       30
+     sky130_fd_sc_hd__and3_1         1
+     sky130_fd_sc_hd__and3b_1        3
+     sky130_fd_sc_hd__and4b_1        4
+     sky130_fd_sc_hd__clkinv_1      15
+     sky130_fd_sc_hd__lpflow_isobufsrc_1      1
+     sky130_fd_sc_hd__nand2_1        1
+     sky130_fd_sc_hd__nand4_1       15
+     sky130_fd_sc_hd__nor3_1         1
+     sky130_fd_sc_hd__nor3b_1        3
+     sky130_fd_sc_hd__nor4b_1        8
+     sky130_fd_sc_hd__nor4bb_1       5
+     sky130_fd_sc_hd__o31ai_1        1
+
+End of script. Logfile hash: 73afe698e0, CPU: user 0.01s system 0.01s, MEM: 15.77 MB peak
+Yosys 0.48+5 (git sha1 4581f75b0, g++ 13.3.0-6ubuntu2~24.04 -fPIC -O3)
+Time spent: 98% 2x read_verilog (0 sec), 1% 1x stat (0 sec)

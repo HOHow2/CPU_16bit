@@ -1,6 +1,0 @@
-<testsuites name="results">
-  <testsuite name="all" package="all">
-    <property name="random_seed" value="1738165885" />
-    <testcase name="register_16bit_tb" classname="register_16bit_tb" file="/home/hong/Workplace/Verilog/Verification_files/reg_16bit/register_16bit_tb.py" lineno="6" time="0.0012974739074707031" sim_time_ns="31.001" ratio_time="23893.351397280414" />
-  </testsuite>
-</testsuites>
