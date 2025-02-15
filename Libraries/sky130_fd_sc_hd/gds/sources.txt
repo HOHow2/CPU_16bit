@@ -1,0 +1,2 @@
+./custom/sky130_fd_sc_hd/gds/*.gds
+../sources/sky130_fd_sc_hd/cells/*/*.gds
