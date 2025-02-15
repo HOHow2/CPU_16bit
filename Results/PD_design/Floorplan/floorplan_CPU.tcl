@@ -92,11 +92,6 @@ eval tapcell $tapcell_args
 source -echo "/home/hong/Workplace/CPU/PD_design/pdn_CPU.tcl"
 pdngen
 
-#global_placement -density 0.7 -routability_driven -skip_io
-#detailed_placement
-#improve_placement
-#check_placement
-
 
 report_design_area
 write_def "/home/hong/Workplace/CPU/PD_design/CPU_fp.def"
