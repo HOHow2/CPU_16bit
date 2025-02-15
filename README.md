@@ -6,3 +6,6 @@ RTL design -> RTL verification -> Synthesis -> STA -> floorplan -> Placement -> 
 
 All necessary files related to the front-end of ASIC design are all in the Workplace folder 
 The back-end design will be performed in the dir: Results/PD_design
+
+
+Reference: https://github.com/the-openroad-project
