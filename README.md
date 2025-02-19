@@ -4,4 +4,8 @@ ICarus, Gtkwave, Yosys, OpenSTA, OpenLane, Magic, Klayout
 ASIC design flow:
 RTL design -> RTL verification -> Synthesis -> STA -> floorplan -> Placement -> CTS -> Routing -> Signoff
 
-The necessary files are all in the Workplace folder
+All necessary files related to the front-end of ASIC design are all in the Workplace folder.
+The back-end design is performed in the dir: Results/PD_design
+
+
+Reference: https://github.com/the-openroad-project
