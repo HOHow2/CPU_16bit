@@ -11,11 +11,12 @@ set_voltage_domain -name {CORE} -power {VDD} -ground {VSS}
 
 #Define the ring structure
 define_pdn_grid -name {grid} -voltage_domains {CORE}
+add_pdn_stripe -grid {grid} -layer {met1} -width {0.17} -pitch {2.4} -offset {0} -followpins
+add_pdn_ring -grid {grid} -layer {met4 met5} -widths 1.6 -spacings 2.0 -core_offset 5 -extend_to_boundary
+add_pdn_ring -grid {grid} -layer {met4 met5} -widths 1.6 -spacings 2.0 -core_offset 5 -extend_to_boundary
 
-add_pdn_ring -grid {grid} -layer {met3 met4} -widths 1.6 -spacings 3.0 -core_offset 3
-add_pdn_ring -grid {grid} -layer {met3 met4} -widths 1.6 -spacings 3.0 -core_offset 5
+add_pdn_connect -grid {grid} -layers {met1 met4}
+add_pdn_connect -grid {grid} -layers {met4 met5}
 
-# Connect metal layers for power and ground
-add_pdn_connect -grid {grid} -layers {met3 met4}
 
 global_connect

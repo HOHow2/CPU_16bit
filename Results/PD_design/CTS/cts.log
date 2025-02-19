@@ -1,0 +1,303 @@
+OpenROAD v2.0-18853-gac67d5a11 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0227] LEF file: /home/hong/Chip_design/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__max.tlef, created 14 layers, 25 vias
+[WARNING ODB-0220] WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+The NOWIREEXTENSIONATPIN statement will be ignored. See file /home/hong/Chip_design/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef at line 2.
+
+[INFO ODB-0227] LEF file: /home/hong/Chip_design/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef, created 437 library cells
+[WARNING ODB-0220] WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+The NOWIREEXTENSIONATPIN statement will be ignored. See file /home/hong/Workplace/CPU/PD_design/sky130_ef_io.lef at line 2.
+
+[INFO ODB-0227] LEF file: /home/hong/Workplace/CPU/PD_design/sky130_ef_io.lef, created 38 library cells
+[WARNING IFP-0028] Core area lower left (12.000, 12.000) snapped to (12.420, 13.600).
+[INFO IFP-0001] Added 49 rows of 294 site unithd.
+[INFO RSZ-0026] Removed 0 buffers.
+[INFO PPL-0070] Pin run placed at (60.03um, 159.85um).
+[INFO PPL-0070] Pin clk placed at (79.81um, 159.85um).
+[INFO PPL-0070] Pin resetn placed at (100.05um, 159.85um).
+[INFO PPL-0070] Pin din[0] placed at (0.15um, 15.30um).
+[INFO PPL-0070] Pin din[1] placed at (0.15um, 22.78um).
+[INFO PPL-0070] Pin din[2] placed at (0.15um, 32.30um).
+[INFO PPL-0070] Pin din[3] placed at (0.15um, 39.78um).
+[INFO PPL-0070] Pin din[4] placed at (0.15um, 49.30um).
+[INFO PPL-0070] Pin din[5] placed at (0.15um, 56.78um).
+[INFO PPL-0070] Pin din[6] placed at (0.15um, 66.30um).
+[INFO PPL-0070] Pin din[7] placed at (0.15um, 73.78um).
+[INFO PPL-0070] Pin din[8] placed at (0.15um, 83.30um).
+[INFO PPL-0070] Pin din[9] placed at (0.15um, 90.78um).
+[INFO PPL-0070] Pin din[10] placed at (0.15um, 100.30um).
+[INFO PPL-0070] Pin din[11] placed at (0.15um, 107.78um).
+[INFO PPL-0070] Pin din[12] placed at (0.15um, 117.30um).
+[INFO PPL-0070] Pin din[13] placed at (0.15um, 124.78um).
+[INFO PPL-0070] Pin din[14] placed at (0.15um, 134.30um).
+[INFO PPL-0070] Pin din[15] placed at (0.15um, 141.78um).
+[INFO PPL-0070] Pin done placed at (79.81um, 0.15um).
+[INFO PPL-0070] Pin buswires[0] placed at (159.85um, 15.30um).
+[INFO PPL-0070] Pin buswires[1] placed at (159.85um, 22.78um).
+[INFO PPL-0070] Pin buswires[2] placed at (159.85um, 32.30um).
+[INFO PPL-0070] Pin buswires[3] placed at (159.85um, 39.78um).
+[INFO PPL-0070] Pin buswires[4] placed at (159.85um, 49.30um).
+[INFO PPL-0070] Pin buswires[5] placed at (159.85um, 56.78um).
+[INFO PPL-0070] Pin buswires[6] placed at (159.85um, 66.30um).
+[INFO PPL-0070] Pin buswires[7] placed at (159.85um, 73.78um).
+[INFO PPL-0070] Pin buswires[8] placed at (159.85um, 83.30um).
+[INFO PPL-0070] Pin buswires[9] placed at (159.85um, 90.78um).
+[INFO PPL-0070] Pin buswires[10] placed at (159.85um, 100.30um).
+[INFO PPL-0070] Pin buswires[11] placed at (159.85um, 107.78um).
+[INFO PPL-0070] Pin buswires[12] placed at (159.85um, 117.30um).
+[INFO PPL-0070] Pin buswires[13] placed at (159.85um, 124.78um).
+[INFO PPL-0070] Pin buswires[14] placed at (159.85um, 134.30um).
+[INFO PPL-0070] Pin buswires[15] placed at (159.85um, 141.78um).
+[INFO TAP-0004] Inserted 98 endcaps.
+[INFO TAP-0005] Inserted 0 tapcells.
+# global  connections
+add_global_connection -net {VDD} -inst_pattern {.*} -pin_pattern {^VPWR$} -power
+add_global_connection -net {VSS} -inst_pattern {.*} -pin_pattern {^VGND$} -ground
+add_global_connection -net {VSS} -inst_pattern {.*} -pin_pattern {^VNB$}
+add_global_connection -net {VDD} -inst_pattern {.*} -pin_pattern {^VPB$}
+# Define voltage domain
+set_voltage_domain -name {CORE} -power {VDD} -ground {VSS}
+#Define the ring structure
+define_pdn_grid -name {grid} -voltage_domains {CORE}
+add_pdn_stripe -grid {grid} -layer {met1} -width {0.17} -pitch {2.4} -offset {0} -followpins
+add_pdn_ring -grid {grid} -layer {met4 met5} -widths 1.6 -spacings 2.0 -core_offset 5 -extend_to_boundary
+add_pdn_ring -grid {grid} -layer {met4 met5} -widths 1.6 -spacings 2.0 -core_offset 5 -extend_to_boundary
+add_pdn_connect -grid {grid} -layers {met1 met4}
+add_pdn_connect -grid {grid} -layers {met4 met5}
+global_connect
+[INFO PDN-0001] Inserting grid: grid
+Design area 7193 u^2 40% utilization.
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: (  0.460  2.720 ) um
+[INFO GPL-0004] CoreBBox: ( 12.420 13.600 ) ( 147.660 146.880 ) um
+[INFO GPL-0006] NumInstances:               566
+[INFO GPL-0007] NumPlaceInstances:          468
+[INFO GPL-0008] NumFixedInstances:           98
+[INFO GPL-0009] NumDummyInstances:            0
+[INFO GPL-0010] NumNets:                    487
+[INFO GPL-0011] NumPins:                   1882
+[INFO GPL-0012] DieBBox:  (  0.000  0.000 ) ( 160.000 160.000 ) um
+[INFO GPL-0013] CoreBBox: ( 12.420 13.600 ) ( 147.660 146.880 ) um
+[INFO GPL-0016] CoreArea:             18024.787 um^2
+[INFO GPL-0017] NonPlaceInstsArea:      122.618 um^2
+[INFO GPL-0018] PlaceInstsArea:        9535.395 um^2
+[INFO GPL-0019] Util:                    53.264 %
+[INFO GPL-0020] StdInstsArea:          9535.395 um^2
+[INFO GPL-0021] MacroInstsArea:           0.000 um^2
+[InitialPlace]  Iter: 1 CG residual: 0.00000012 HPWL: 10170500
+[InitialPlace]  Iter: 2 CG residual: 0.00000008 HPWL: 8853002
+[InitialPlace]  Iter: 3 CG residual: 0.00000006 HPWL: 8940118
+[InitialPlace]  Iter: 4 CG residual: 0.00000007 HPWL: 8962064
+[InitialPlace]  Iter: 5 CG residual: 0.00000006 HPWL: 8965824
+[INFO GPL-0031] FillerInit:NumGCells:       705
+[INFO GPL-0032] FillerInit:NumGNets:        487
+[INFO GPL-0033] FillerInit:NumGPins:       1882
+[INFO GPL-0023] TargetDensity:            0.800
+[INFO GPL-0024] AvrgPlaceInstArea:       20.375 um^2
+[INFO GPL-0025] IdealBinArea:            25.468 um^2
+[INFO GPL-0026] IdealBinCnt:                707
+[INFO GPL-0027] TotalBinArea:         18024.787 um^2
+[INFO GPL-0028] BinCnt:        16     16
+[INFO GPL-0029] BinSize: (  8.453  8.330 )
+[INFO GPL-0030] NumBins: 256
+[NesterovSolve] Iter:    1 overflow: 0.928 HPWL: 5393817
+[NesterovSolve] Iter:   10 overflow: 0.865 HPWL: 7248556
+[NesterovSolve] Iter:   20 overflow: 0.847 HPWL: 7231063
+[NesterovSolve] Iter:   30 overflow: 0.855 HPWL: 7094330
+[NesterovSolve] Iter:   40 overflow: 0.868 HPWL: 6975921
+[NesterovSolve] Iter:   50 overflow: 0.866 HPWL: 6915186
+[NesterovSolve] Iter:   60 overflow: 0.865 HPWL: 6903161
+[NesterovSolve] Iter:   70 overflow: 0.866 HPWL: 6922625
+[NesterovSolve] Iter:   80 overflow: 0.868 HPWL: 6949322
+[NesterovSolve] Iter:   90 overflow: 0.866 HPWL: 6967671
+[NesterovSolve] Iter:  100 overflow: 0.865 HPWL: 6977964
+[NesterovSolve] Iter:  110 overflow: 0.865 HPWL: 6987832
+[NesterovSolve] Iter:  120 overflow: 0.864 HPWL: 7008039
+[NesterovSolve] Iter:  130 overflow: 0.860 HPWL: 7046097
+[NesterovSolve] Iter:  140 overflow: 0.851 HPWL: 7106724
+[NesterovSolve] Iter:  150 overflow: 0.844 HPWL: 7185205
+[NesterovSolve] Iter:  160 overflow: 0.832 HPWL: 7281302
+[NesterovSolve] Iter:  170 overflow: 0.822 HPWL: 7406253
+[NesterovSolve] Iter:  180 overflow: 0.797 HPWL: 7538081
+[NesterovSolve] Iter:  190 overflow: 0.777 HPWL: 7678159
+[NesterovSolve] Iter:  200 overflow: 0.752 HPWL: 7898477
+[NesterovSolve] Iter:  210 overflow: 0.718 HPWL: 8093787
+[NesterovSolve] Iter:  220 overflow: 0.678 HPWL: 8347183
+[NesterovSolve] Iter:  230 overflow: 0.640 HPWL: 8648791
+[INFO GPL-0088] Routability snapshot saved at iter = 237
+[NesterovSolve] Iter:  240 overflow: 0.591 HPWL: 8867871
+[NesterovSolve] Iter:  250 overflow: 0.544 HPWL: 9091723
+[NesterovSolve] Iter:  260 overflow: 0.497 HPWL: 9321068
+[NesterovSolve] Iter:  270 overflow: 0.445 HPWL: 9500326
+[NesterovSolve] Iter:  280 overflow: 0.386 HPWL: 9583560
+[NesterovSolve] Iter:  290 overflow: 0.335 HPWL: 9641048
+[INFO GPL-0075] Routability iteration: 1
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 6885 6885 ) DBU
+[INFO GPL-0038] TileCnt:      23   23
+[INFO GPL-0040] NumTiles: 529
+[INFO GPL-0081] TotalRouteOverflow: 0.0000
+[INFO GPL-0082] OverflowTileCnt: 0
+[INFO GPL-0083] 0.5%RC: 0.6375
+[INFO GPL-0084] 1.0%RC: 0.6248
+[INFO GPL-0085] 2.0%RC: 0.6110
+[INFO GPL-0086] 5.0%RC: 0.5798
+[INFO GPL-0087] FinalRC: 0.631183
+[INFO GPL-0077] FinalRC lower than targetRC(1.0100), routability not needed.
+[NesterovSolve] Iter:  300 overflow: 0.292 HPWL: 9608965
+[NesterovSolve] Iter:  310 overflow: 0.256 HPWL: 9461602
+[NesterovSolve] Iter:  320 overflow: 0.223 HPWL: 9386140
+[NesterovSolve] Iter:  330 overflow: 0.195 HPWL: 9326446
+[NesterovSolve] Iter:  340 overflow: 0.155 HPWL: 9405580
+[NesterovSolve] Iter:  350 overflow: 0.126 HPWL: 9453169
+[NesterovSolve] Iter:  360 overflow: 0.108 HPWL: 9500785
+[NesterovSolve] Finished with Overflow: 0.099587
+[INFO RSZ-0027] Inserted 18 input buffers.
+[INFO RSZ-0028] Inserted 17 output buffers.
+[INFO RSZ-0058] Using max wire length 380um.
+[INFO RSZ-0034] Found 1 slew violations.
+[INFO RSZ-0038] Inserted 2 buffers in 1 nets.
+[INFO RSZ-0039] Resized 109 instances.
+[INFO RSZ-0098] No setup violations found
+[INFO RSZ-0033] No hold violations found.
+Placement Analysis
+---------------------------------
+total displacement       2049.7 u
+average displacement        3.4 u
+max displacement           18.1 u
+original HPWL            9728.4 u
+legalized HPWL          12263.1 u
+delta HPWL                   26 %
+
+Detailed placement improvement.
+Importing netlist into detailed improver.
+[INFO DPO-0100] Creating network with 603 cells, 36 terminals, 524 edges, 1956 pins, and 0 blockages.
+[INFO DPO-0109] Network stats: inst 639, edges 524, pins 1956
+[INFO DPO-0110] Number of regions is 1
+[INFO DPO-0401] Setting random seed to 1.
+[INFO DPO-0402] Setting maximum displacement 0 0 to 270480 270480 units.
+[INFO DPO-0320] Collected 134 fixed cells.
+[INFO DPO-0318] Collected 505 single height cells.
+[INFO DPO-0321] Collected 0 wide cells.
+[INFO DPO-0322] Image (12420, 13600) - (147660, 146880)
+[INFO DPO-0310] Assigned 505 cells into segments.  Movement in X-direction is 0.000000, movement in Y-direction is 0.000000.
+[INFO DPO-0313] Found 0 cells in wrong regions.
+[INFO DPO-0315] Found 0 row alignment problems.
+[INFO DPO-0314] Found 0 site alignment problems.
+[INFO DPO-0311] Found 0 overlaps between adjacent cells.
+[INFO DPO-0312] Found 0 edge spacing violations and 0 padding violations.
+[INFO DPO-0303] Running algorithm for independent set matching.
+[INFO DPO-0300] Set matching objective is wirelength.
+[INFO DPO-0301] Pass   1 of matching; objective is 1.226462e+07.
+[INFO DPO-0302] End of matching; objective is 1.225097e+07, improvement is 0.11 percent.
+[INFO DPO-0303] Running algorithm for global swaps.
+[INFO DPO-0306] Pass   1 of global swaps; hpwl is 1.176417e+07.
+[INFO DPO-0306] Pass   2 of global swaps; hpwl is 1.168334e+07.
+[INFO DPO-0307] End of global swaps; objective is 1.168334e+07, improvement is 4.63 percent.
+[INFO DPO-0303] Running algorithm for vertical swaps.
+[INFO DPO-0308] Pass   1 of vertical swaps; hpwl is 1.157675e+07.
+[INFO DPO-0309] End of vertical swaps; objective is 1.157675e+07, improvement is 0.91 percent.
+[INFO DPO-0303] Running algorithm for reordering.
+[INFO DPO-0304] Pass   1 of reordering; objective is 1.150239e+07.
+[INFO DPO-0305] End of reordering; objective is 1.150239e+07, improvement is 0.64 percent.
+[INFO DPO-0303] Running algorithm for random improvement.
+[INFO DPO-0324] Random improver is using displacement generator.
+[INFO DPO-0325] Random improver is using hpwl objective.
+[INFO DPO-0326] Random improver cost string is (a).
+[INFO DPO-0332] End of pass, Generator displacement called 10100 times.
+[INFO DPO-0335] Generator displacement, Cumulative attempts 10100, swaps 4631, moves  5326 since last reset.
+[INFO DPO-0333] End of pass, Objective hpwl, Initial cost 1.125994e+07, Scratch cost 1.103034e+07, Incremental cost 1.103034e+07, Mismatch? N
+[INFO DPO-0338] End of pass, Total cost is 1.103034e+07.
+[INFO DPO-0327] Pass   1 of random improver; improvement in cost is 2.04 percent.
+[INFO DPO-0332] End of pass, Generator displacement called 10100 times.
+[INFO DPO-0335] Generator displacement, Cumulative attempts 20200, swaps 9283, moves 10609 since last reset.
+[INFO DPO-0333] End of pass, Objective hpwl, Initial cost 1.103034e+07, Scratch cost 1.095142e+07, Incremental cost 1.095142e+07, Mismatch? N
+[INFO DPO-0338] End of pass, Total cost is 1.095142e+07.
+[INFO DPO-0327] Pass   2 of random improver; improvement in cost is 0.72 percent.
+[INFO DPO-0328] End of random improver; improvement is 2.739935 percent.
+[INFO DPO-0380] Cell flipping.
+[INFO DPO-0382] Changed 248 cell orientations for row compatibility.
+[INFO DPO-0383] Performed 100 cell flips.
+[INFO DPO-0384] End of flipping; objective is 1.118559e+07, improvement is 0.07 percent.
+[INFO DPO-0313] Found 0 cells in wrong regions.
+[INFO DPO-0315] Found 0 row alignment problems.
+[INFO DPO-0314] Found 0 site alignment problems.
+[INFO DPO-0311] Found 0 overlaps between adjacent cells.
+[INFO DPO-0312] Found 0 edge spacing violations and 0 padding violations.
+Detailed Improvement Results
+------------------------------------------
+Original HPWL            12263.1 u
+Final HPWL               11065.5 u
+Delta HPWL                  -9.8 %
+
+worst slack 0.1535
+worst slack 2.4593
+tns 0.0000
+[INFO CTS-0050] Root buffer is sky130_fd_sc_hd__clkbuf_1.
+[INFO CTS-0051] Sink buffer is sky130_fd_sc_hd__clkbuf_1.
+[INFO CTS-0052] The following clock buffers will be used for CTS:
+                    sky130_fd_sc_hd__clkbuf_1
+[INFO CTS-0049] Characterization buffer is sky130_fd_sc_hd__clkbuf_1.
+[INFO CTS-0007] Net "clk" found for clock "clk".
+[INFO CTS-0010]  Clock net "clk" has 171 sinks.
+[INFO CTS-0008] TritonCTS found 1 clock nets.
+[INFO CTS-0097] Characterization used 1 buffer(s) types.
+[INFO CTS-0200] 0 placement blockages have been identified.
+[INFO CTS-0201] 0 placed hard macros will be treated like blockages.
+[INFO CTS-0027] Generating H-Tree topology for net clk.
+[INFO CTS-0028]  Total number of sinks: 171.
+[INFO CTS-0029]  Sinks will be clustered in groups of up to 20 and with maximum cluster diameter of 10.0 um.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 13600  dbu (13 um).
+[INFO CTS-0023]  Original sink region: [(34770, 17740), (132290, 129140)].
+[INFO CTS-0024]  Normalized sink region: [(2.55662, 1.30441), (9.72721, 9.49559)].
+[INFO CTS-0025]     Width:  7.1706.
+[INFO CTS-0026]     Height: 8.1912.
+ Level 1
+    Direction: Vertical
+    Sinks per sub-region: 86
+    Sub-region size: 7.1706 X 4.0956
+[INFO CTS-0034]     Segment length (rounded): 2.
+ Level 2
+    Direction: Horizontal
+    Sinks per sub-region: 43
+    Sub-region size: 3.5853 X 4.0956
+[INFO CTS-0034]     Segment length (rounded): 2.
+ Level 3
+    Direction: Vertical
+    Sinks per sub-region: 22
+    Sub-region size: 3.5853 X 2.0478
+[INFO CTS-0034]     Segment length (rounded): 1.
+ Level 4
+    Direction: Horizontal
+    Sinks per sub-region: 11
+    Sub-region size: 1.7926 X 2.0478
+[INFO CTS-0034]     Segment length (rounded): 1.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 171.
+[INFO CTS-0018]     Created 17 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 2.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 2.
+[INFO CTS-0015]     Created 17 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 6:1, 8:2, 9:2, 10:2, 11:3, 12:3, 13:1, 14:1, 15:1..
+[INFO CTS-0017]     Max level of the clock tree: 4.
+[INFO CTS-0098] Clock net "clk"
+[INFO CTS-0099]  Sinks 186
+[INFO CTS-0100]  Leaf buffers 0
+[INFO CTS-0101]  Average sink wire length 157.52 um
+[INFO CTS-0102]  Path depth 2 - 2
+[INFO CTS-0207]  Leaf load cells 15
+[INFO RSZ-0058] Using max wire length 380um.
+Placement Analysis
+---------------------------------
+total displacement        167.6 u
+average displacement        0.3 u
+max displacement            8.6 u
+original HPWL           11786.9 u
+legalized HPWL          12038.4 u
+delta HPWL                    2 %
+
+worst slack 0.1535
+worst slack 2.4593
+tns 0.0000

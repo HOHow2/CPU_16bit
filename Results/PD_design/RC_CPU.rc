@@ -1,0 +1,14 @@
+# cap units pf/um
+set_layer_rc -layer li1 -capacitance 3.69866E-05 -resistance 1.70E+01
+set_layer_rc -layer met1 -capacitance 2.57784E-05 -resistance 1.45E-01
+set_layer_rc -layer met2 -capacitance 16.9423E-6 -resistance 0.145E+0
+set_layer_rc -layer met3 -capacitance 1.23729E-05 -resistance 5.60E-02
+set_layer_rc -layer met4 -capacitance 8.41537E-06 -resistance 5.60E-02
+set_layer_rc -layer met5 -capacitance 6.32063E-06 -resistance 3.58E-02
+# end correlate
+
+set_layer_rc -via mcon -resistance 2.30E+1
+set_layer_rc -via via  -resistance 1.50E+1
+set_layer_rc -via via2 -resistance 8.0E+0
+set_layer_rc -via via3 -resistance 8.0E+0
+set_layer_rc -via via4 -resistance 8.91E-01
