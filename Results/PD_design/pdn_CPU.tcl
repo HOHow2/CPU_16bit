@@ -1,8 +1,21 @@
 # global  connections
-add_global_connection -net {VDD} -inst_pattern {.*} -pin_pattern {^VPWR$} -power
-add_global_connection -net {VSS} -inst_pattern {.*} -pin_pattern {^VGND$} -ground
-add_global_connection -net {VSS} -inst_pattern {.*} -pin_pattern {^VNB$}
-add_global_connection -net {VDD} -inst_pattern {.*} -pin_pattern {^VPB$}
+add_global_connection -defer_connection -net {VDD} -inst_pattern {.*} -pin_pattern {^VDD$} -power
+add_global_connection -defer_connection -net {VDD} -inst_pattern {.*} -pin_pattern {^VDDPE$}
+add_global_connection -defer_connection -net {VDD} -inst_pattern {.*} -pin_pattern {^VDDCE$}
+add_global_connection -defer_connection -net {VDD} -inst_pattern {.*} -pin_pattern {VPWR}
+add_global_connection -defer_connection -net {VDD} -inst_pattern {.*} -pin_pattern {VPB}
+add_global_connection -defer_connection -net {VSS} -inst_pattern {.*} -pin_pattern {^VSS$} -ground
+add_global_connection -defer_connection -net {VSS} -inst_pattern {.*} -pin_pattern {^VSSE$}
+add_global_connection -defer_connection -net {VSS} -inst_pattern {.*} -pin_pattern {VGND}
+add_global_connection -defer_connection -net {VSS} -inst_pattern {.*} -pin_pattern {VNB}
+add_global_connection -defer_connection -net {Control_unit_module/zero_} -inst_pattern {.*} -pin_pattern {zero_} -ground
+global_connect
+
+
+#add_global_connection -net {VDD} -inst_pattern {.*} -pin_pattern {^VPWR$} -power
+#add_global_connection -net {VSS} -inst_pattern {.*} -pin_pattern {^VGND$} -ground
+#add_global_connection -net {VSS} -inst_pattern {.*} -pin_pattern {^VNB$}
+#add_global_connection -net {VDD} -inst_pattern {.*} -pin_pattern {^VPB$}
 
 
 # Define voltage domain
@@ -19,4 +32,4 @@ add_pdn_connect -grid {grid} -layers {met1 met4}
 add_pdn_connect -grid {grid} -layers {met4 met5}
 
 
-global_connect
+#global_connect
