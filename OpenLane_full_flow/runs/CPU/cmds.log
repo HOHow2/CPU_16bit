@@ -1,0 +1,166 @@
+Thu Feb 27 21:51:05 +07 2025 - Executing "{openroad -exit -no_init -python /home/seaky/chip_design/OpenLane/scripts/odbpy/lefutil.py get_metal_layers -o /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/layers.list /home/seaky/chip_design/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef}"
+
+Thu Feb 27 21:51:05 +07 2025 - Executing "{/home/seaky/chip_design/OpenLane/scripts/mergeLef.py -o /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/merged.nom.lef -i /home/seaky/chip_design/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef {/home/seaky/chip_design/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef /home/seaky/chip_design/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef} |& tee /dev/null}"
+
+Thu Feb 27 21:51:05 +07 2025 - Executing "{/home/seaky/chip_design/OpenLane/scripts/mergeLef.py -o /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/merged.min.lef -i /home/seaky/chip_design/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__min.tlef {/home/seaky/chip_design/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef /home/seaky/chip_design/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef} |& tee /dev/null}"
+
+Thu Feb 27 21:51:05 +07 2025 - Executing "{/home/seaky/chip_design/OpenLane/scripts/mergeLef.py -o /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/merged.max.lef -i /home/seaky/chip_design/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__max.tlef {/home/seaky/chip_design/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef /home/seaky/chip_design/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef} |& tee /dev/null}"
+
+Thu Feb 27 21:51:06 +07 2025 - Executing "{python3 /home/seaky/chip_design/OpenLane/scripts/mergeLib.py --output /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/synthesis/merged.lib --name sky130A_merged /home/seaky/chip_design/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib}"
+
+Thu Feb 27 21:51:06 +07 2025 - Executing "{python3 /home/seaky/chip_design/OpenLane/scripts/libtrim.py --cell-file /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/synthesis/trimmed.lib.exclude.list --output /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/synthesis/trimmed.lib /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/synthesis/merged.lib}"
+
+Thu Feb 27 21:51:06 +07 2025 - Executing "{python3 /home/seaky/chip_design/OpenLane/scripts/libtrim.py --cell-file /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/cts/cts.lib.exclude.list --output /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/cts/cts.lib /home/seaky/chip_design/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib}"
+
+Thu Feb 27 21:51:06 +07 2025 - Executing "{python3 /home/seaky/chip_design/OpenLane/scripts/libtrim.py --cell-file /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/cts/cts-fastest.lib.exclude.list --output /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/cts/cts-fastest.lib /home/seaky/chip_design/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib}"
+
+Thu Feb 27 21:51:06 +07 2025 - Executing "{python3 /home/seaky/chip_design/OpenLane/scripts/libtrim.py --cell-file /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/cts/cts-slowest.lib.exclude.list --output /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/cts/cts-slowest.lib /home/seaky/chip_design/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib}"
+
+Thu Feb 27 21:51:06 +07 2025 - Executing "{python3 /home/seaky/chip_design/OpenLane/scripts/new_tracks.py -i /home/seaky/chip_design/open_pdks/sky130/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tracks.info -o /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/routing/config.tracks}"
+
+Thu Feb 27 21:51:06 +07 2025 - Executing "{echo {OpenLane e73fb3c57e687a0023fcd4dcfd1566ecd478362a} > /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/OPENLANE_COMMIT}"
+
+Thu Feb 27 21:51:06 +07 2025 - Executing "{sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /home/seaky/chip_design/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib > /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/synthesis/1-sky130_fd_sc_hd__tt_025C_1v80.no_pg.lib}"
+
+Thu Feb 27 21:51:07 +07 2025 - Executing "{sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/synthesis/trimmed.lib > /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/synthesis/1-trimmed.no_pg.lib}"
+
+Thu Feb 27 21:51:07 +07 2025 - Executing "yosys -c /home/seaky/chip_design/OpenLane/scripts/yosys/synth.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/synthesis/1-synthesis.log"
+
+Thu Feb 27 21:51:07 +07 2025 - Executing "{yosys -c /home/seaky/chip_design/OpenLane/scripts/yosys/synth.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/synthesis/1-synthesis.log}"
+
+Thu Feb 27 21:51:08 +07 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/home\/seaky\/chip_design\/OpenLane\/designs\/CPU_16bit\/runs\/CPU\/results\/synthesis\/CPU.v/} /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/config.tcl}"
+
+Thu Feb 27 21:51:08 +07 2025 - Executing "{sed -i.bak /defparam/d /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/results/synthesis/CPU.v}"
+
+Thu Feb 27 21:51:08 +07 2025 - Executing "sta -exit -no_init /home/seaky/chip_design/OpenLane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/synthesis/2-sta.log"
+
+Thu Feb 27 21:51:08 +07 2025 - Executing "{sta -exit -no_init /home/seaky/chip_design/OpenLane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/synthesis/2-sta.log}"
+
+Thu Feb 27 21:51:08 +07 2025 - Executing "openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/floorplan.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/floorplan/3-initial_fp.log"
+
+Thu Feb 27 21:51:08 +07 2025 - Executing "{openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/floorplan.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/floorplan/3-initial_fp.log}"
+
+Thu Feb 27 21:51:09 +07 2025 - Executing "{openroad -exit -no_init -python /home/seaky/chip_design/OpenLane/scripts/odbpy/snap_to_grid.py --output /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/floorplan/3-minimized_pdn.txt --input-lef /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/merged.nom.lef 18.572499999999998 18.36 37.144999999999996 36.72}"
+
+Thu Feb 27 21:51:09 +07 2025 - Executing "{openroad -exit -no_init -python /home/seaky/chip_design/OpenLane/scripts/odbpy/defutil.py extract_core_dims --output-data /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/dimensions.txt --input-lef /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/merged.nom.lef /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/floorplan/3-initial_fp.def}"
+
+Thu Feb 27 21:51:09 +07 2025 - Executing "openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/ioplacer.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/floorplan/4-io.log"
+
+Thu Feb 27 21:51:09 +07 2025 - Executing "{openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/ioplacer.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/floorplan/4-io.log}"
+
+Thu Feb 27 21:51:10 +07 2025 - Executing "openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/tapcell.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/floorplan/5-tap.log"
+
+Thu Feb 27 21:51:10 +07 2025 - Executing "{openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/tapcell.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/floorplan/5-tap.log}"
+
+Thu Feb 27 21:51:10 +07 2025 - Executing "openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/pdn.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/floorplan/6-pdn.log"
+
+Thu Feb 27 21:51:10 +07 2025 - Executing "{openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/pdn.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/floorplan/6-pdn.log}"
+
+Thu Feb 27 21:51:10 +07 2025 - Executing "openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/gpl.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/placement/6-global_skip_io.log"
+
+Thu Feb 27 21:51:10 +07 2025 - Executing "{openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/gpl.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/placement/6-global_skip_io.log}"
+
+Thu Feb 27 21:51:11 +07 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/home\/seaky\/chip_design\/OpenLane\/designs\/CPU_16bit\/runs\/CPU\/tmp\/placement\/7-global_skip_io.nl.v/} /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/config.tcl}"
+
+Thu Feb 27 21:51:11 +07 2025 - Executing "openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/placement/8-gpl_sta.log"
+
+Thu Feb 27 21:51:11 +07 2025 - Executing "{openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/placement/8-gpl_sta.log}"
+
+Thu Feb 27 21:51:11 +07 2025 - Executing "openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/ioplacer.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/placement/9-io.log"
+
+Thu Feb 27 21:51:11 +07 2025 - Executing "{openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/ioplacer.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/placement/9-io.log}"
+
+Thu Feb 27 21:51:12 +07 2025 - Executing "openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/gpl.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/placement/9-global.log"
+
+Thu Feb 27 21:51:12 +07 2025 - Executing "{openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/gpl.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/placement/9-global.log}"
+
+Thu Feb 27 21:51:12 +07 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/home\/seaky\/chip_design\/OpenLane\/designs\/CPU_16bit\/runs\/CPU\/tmp\/placement\/10-global.nl.v/} /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/config.tcl}"
+
+Thu Feb 27 21:51:12 +07 2025 - Executing "openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/placement/11-gpl_sta.log"
+
+Thu Feb 27 21:51:12 +07 2025 - Executing "{openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/placement/11-gpl_sta.log}"
+
+Thu Feb 27 21:51:13 +07 2025 - Executing "openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/resizer.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/placement/12-resizer.log"
+
+Thu Feb 27 21:51:13 +07 2025 - Executing "{openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/resizer.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/placement/12-resizer.log}"
+
+Thu Feb 27 21:51:15 +07 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/home\/seaky\/chip_design\/OpenLane\/designs\/CPU_16bit\/runs\/CPU\/tmp\/placement\/12-resizer.nl.v/} /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/config.tcl}"
+
+Thu Feb 27 21:51:15 +07 2025 - Executing "openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/dpl.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/placement/13-detailed.log"
+
+Thu Feb 27 21:51:15 +07 2025 - Executing "{openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/dpl.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/placement/13-detailed.log}"
+
+Thu Feb 27 21:51:15 +07 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/home\/seaky\/chip_design\/OpenLane\/designs\/CPU_16bit\/runs\/CPU\/results\/placement\/CPU.nl.v/} /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/config.tcl}"
+
+Thu Feb 27 21:51:15 +07 2025 - Executing "openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/placement/14-dpl_sta.log"
+
+Thu Feb 27 21:51:16 +07 2025 - Executing "{openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/placement/14-dpl_sta.log}"
+
+Thu Feb 27 21:51:16 +07 2025 - Executing "openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/resizer_routing_design.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/routing/15-resizer_design.log"
+
+Thu Feb 27 21:51:16 +07 2025 - Executing "{openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/resizer_routing_design.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/routing/15-resizer_design.log}"
+
+Thu Feb 27 21:51:18 +07 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/home\/seaky\/chip_design\/OpenLane\/designs\/CPU_16bit\/runs\/CPU\/tmp\/15-CPU.nl.v/} /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/config.tcl}"
+
+Thu Feb 27 21:51:19 +07 2025 - Executing "openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/routing/16-rsz_design_sta.log"
+
+Thu Feb 27 21:51:19 +07 2025 - Executing "{openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/routing/16-rsz_design_sta.log}"
+
+Thu Feb 27 21:51:19 +07 2025 - Executing "openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/resizer_routing_timing.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/routing/17-resizer_timing.log"
+
+Thu Feb 27 21:51:19 +07 2025 - Executing "{openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/resizer_routing_timing.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/routing/17-resizer_timing.log}"
+
+Thu Feb 27 21:51:21 +07 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/home\/seaky\/chip_design\/OpenLane\/designs\/CPU_16bit\/runs\/CPU\/tmp\/17-CPU.nl.v/} /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/config.tcl}"
+
+Thu Feb 27 21:51:21 +07 2025 - Executing "openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/routing/18-rsz_timing_sta.log"
+
+Thu Feb 27 21:51:21 +07 2025 - Executing "{openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/routing/18-rsz_timing_sta.log}"
+
+Thu Feb 27 21:51:22 +07 2025 - Executing "openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/repair_antennas.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/routing/19-global.log"
+
+Thu Feb 27 21:51:22 +07 2025 - Executing "{openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/repair_antennas.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/routing/19-global.log}"
+
+Thu Feb 27 21:51:23 +07 2025 - Executing "openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/write_views.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/routing/19-global_write_netlist.log"
+
+Thu Feb 27 21:51:23 +07 2025 - Executing "{openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/write_views.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/routing/19-global_write_netlist.log}"
+
+Thu Feb 27 21:51:23 +07 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/home\/seaky\/chip_design\/OpenLane\/designs\/CPU_16bit\/runs\/CPU\/tmp\/routing\/global.nl.v/} /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/config.tcl}"
+
+Thu Feb 27 21:51:24 +07 2025 - Executing "openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/routing/21-grt_sta.log"
+
+Thu Feb 27 21:51:24 +07 2025 - Executing "{openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/routing/21-grt_sta.log}"
+
+Thu Feb 27 21:51:24 +07 2025 - Executing "openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/fill.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/routing/22-fill.log"
+
+Thu Feb 27 21:51:24 +07 2025 - Executing "{openroad -exit /home/seaky/chip_design/OpenLane/scripts/openroad/fill.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/routing/22-fill.log}"
+
+Thu Feb 27 21:51:24 +07 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/home\/seaky\/chip_design\/OpenLane\/designs\/CPU_16bit\/runs\/CPU\/tmp\/routing\/22-fill.nl.v/} /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/config.tcl}"
+
+Thu Feb 27 21:51:24 +07 2025 - Executing "openroad -exit -metrics /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/reports/routing/23-drt_metrics.json /home/seaky/chip_design/OpenLane/scripts/openroad/droute.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/routing/23-detailed.log"
+
+Thu Feb 27 21:51:25 +07 2025 - Executing "{openroad -exit -metrics /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/reports/routing/23-drt_metrics.json /home/seaky/chip_design/OpenLane/scripts/openroad/droute.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/routing/23-detailed.log}"
+
+Thu Feb 27 21:52:10 +07 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/home\/seaky\/chip_design\/OpenLane\/designs\/CPU_16bit\/runs\/CPU\/results\/routing\/CPU.nl.v/} /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/config.tcl}"
+
+Thu Feb 27 21:52:10 +07 2025 - Executing "{python3 /home/seaky/chip_design/OpenLane/scripts/drc_rosetta.py tr to_klayout -o /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/reports/routing/drt.klayout.xml --design-name CPU /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/reports/routing/drt.drc}"
+
+Thu Feb 27 21:52:10 +07 2025 - Executing "{openroad -exit -no_init -python /home/seaky/chip_design/OpenLane/scripts/odbpy/wire_lengths.py --report-out /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/reports/routing/24-wire_lengths.csv --input-lef /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/merged.nom.lef --output-def /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/results/routing/CPU.def --output /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/results/routing/CPU.odb /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/results/routing/CPU.odb |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/routing/24-wire_lengths.log}"
+
+Thu Feb 27 21:52:10 +07 2025 - Executing "magic -noconsole -dnull -rcfile /home/seaky/chip_design/open_pdks/sky130/sky130A/libs.tech/magic/sky130A.magicrc < /home/seaky/chip_design/OpenLane/scripts/magic/wrapper.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/signoff/25-gdsii.log"
+
+Thu Feb 27 21:52:10 +07 2025 - Executing "{magic -noconsole -dnull -rcfile /home/seaky/chip_design/open_pdks/sky130/sky130A/libs.tech/magic/sky130A.magicrc < /home/seaky/chip_design/OpenLane/scripts/magic/wrapper.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/signoff/25-gdsii.log}"
+
+Thu Feb 27 21:52:11 +07 2025 - Executing "magic -noconsole -dnull -rcfile /home/seaky/chip_design/open_pdks/sky130/sky130A/libs.tech/magic/sky130A.magicrc < /home/seaky/chip_design/OpenLane/scripts/magic/wrapper.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/signoff/25-gds_ptrs.log"
+
+Thu Feb 27 21:52:11 +07 2025 - Executing "{magic -noconsole -dnull -rcfile /home/seaky/chip_design/open_pdks/sky130/sky130A/libs.tech/magic/sky130A.magicrc < /home/seaky/chip_design/OpenLane/scripts/magic/wrapper.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/signoff/25-gds_ptrs.log}"
+
+Thu Feb 27 21:52:11 +07 2025 - Executing "{sed -i.bak -n {/^<< properties >>/,/^<< end >>/p} /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/signoff/gds_ptrs.mag}"
+
+Thu Feb 27 21:52:11 +07 2025 - Executing "magic -noconsole -dnull -rcfile /home/seaky/chip_design/open_pdks/sky130/sky130A/libs.tech/magic/sky130A.magicrc < /home/seaky/chip_design/OpenLane/scripts/magic/wrapper.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/signoff/25-lef.log"
+
+Thu Feb 27 21:52:11 +07 2025 - Executing "{magic -noconsole -dnull -rcfile /home/seaky/chip_design/open_pdks/sky130/sky130A/libs.tech/magic/sky130A.magicrc < /home/seaky/chip_design/OpenLane/scripts/magic/wrapper.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/signoff/25-lef.log}"
+
+Thu Feb 27 21:52:12 +07 2025 - Executing "magic -noconsole -dnull -rcfile /home/seaky/chip_design/open_pdks/sky130/sky130A/libs.tech/magic/sky130A.magicrc < /home/seaky/chip_design/OpenLane/scripts/magic/wrapper.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/signoff/25-maglef.log"
+
+Thu Feb 27 21:52:12 +07 2025 - Executing "{magic -noconsole -dnull -rcfile /home/seaky/chip_design/open_pdks/sky130/sky130A/libs.tech/magic/sky130A.magicrc < /home/seaky/chip_design/OpenLane/scripts/magic/wrapper.tcl |& tee /dev/null /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/logs/signoff/25-maglef.log}"
+

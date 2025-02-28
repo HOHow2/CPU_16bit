@@ -1,0 +1,67 @@
+[WARNING GRT-0026] Missing route to pin hold5/A in net ALU_16bit.aluout\[1\].
+[WARNING GRT-0026] Missing route to pin hold6/A in net ALU_16bit.aluout\[7\].
+[WARNING GRT-0026] Missing route to pin hold31/A in net Mux.r2\[0\].
+[WARNING GRT-0026] Missing route to pin hold52/A in net Mux.r2\[15\].
+[WARNING GRT-0026] Missing route to pin hold26/A in net Mux.r3\[0\].
+[WARNING GRT-0026] Missing route to pin hold29/A in net Mux.r3\[15\].
+[WARNING GRT-0026] Missing route to pin hold51/A in net Mux.r4\[1\].
+[WARNING GRT-0026] Missing route to pin hold63/A in net Mux.r4\[7\].
+[WARNING GRT-0026] Missing route to pin hold33/A in net Mux.r5\[4\].
+[WARNING GRT-0026] Missing route to pin _1140_/B in net Mux.r5\[4\].
+[WARNING GRT-0026] Missing route to pin hold20/A in net Mux.r5\[8\].
+[WARNING GRT-0026] Missing route to pin _1224_/A1_N in net Mux.r5\[8\].
+[WARNING GRT-0026] Missing route to pin hold15/A in net Mux.r6\[0\].
+[WARNING GRT-0026] Missing route to pin _1028_/B in net Mux.r6\[0\].
+[WARNING GRT-0026] Missing route to pin hold18/A in net Mux.r6\[12\].
+[WARNING GRT-0026] Missing route to pin hold27/A in net Mux.r6\[8\].
+[WARNING GRT-0026] Missing route to pin hold47/A in net Mux.r6\[9\].
+[WARNING GRT-0026] Missing route to pin _1248_/B in net Mux.r6\[9\].
+[WARNING GRT-0026] Missing route to pin _1305_/A1 in net Mux.r7\[12\].
+[WARNING GRT-0026] Missing route to pin hold32/A in net Mux.r7\[3\].
+[WARNING GRT-0026] Missing route to pin _1386_/X in net _0012_.
+[WARNING GRT-0026] Missing route to pin _1614_/X in net _0120_.
+[WARNING GRT-0026] Missing route to pin _1616_/X in net _0121_.
+[WARNING GRT-0026] Missing route to pin _1725_/X in net _0143_.
+[WARNING GRT-0026] Missing route to pin _1922_/X in net _0174_.
+[WARNING GRT-0026] Missing route to pin _1855_/A in net _0237_.
+[WARNING GRT-0026] Missing route to pin _1769_/A in net _0339_.
+[WARNING GRT-0026] Missing route to pin _1769_/B in net _0340_.
+[WARNING GRT-0026] Missing route to pin _1855_/Y in net _0421_.
+[WARNING GRT-0026] Missing route to pin _1882_/B in net _0445_.
+[WARNING GRT-0026] Missing route to pin _1881_/Y in net _0445_.
+[WARNING GRT-0026] Missing route to pin _1922_/A in net _0465_.
+[WARNING GRT-0026] Missing route to pin _1330_/B in net _0518_.
+[WARNING GRT-0026] Missing route to pin _1330_/A in net _0527_.
+[WARNING GRT-0026] Missing route to pin _1028_/A in net _0527_.
+[WARNING GRT-0026] Missing route to pin _1307_/B1 in net _0550_.
+[WARNING GRT-0026] Missing route to pin _1272_/B1 in net _0550_.
+[WARNING GRT-0026] Missing route to pin _1140_/A in net _0562_.
+[WARNING GRT-0026] Missing route to pin _1140_/C in net _0570_.
+[WARNING GRT-0026] Missing route to pin _1345_/A in net _0636_.
+[WARNING GRT-0026] Missing route to pin _1140_/Y in net _0645_.
+[WARNING GRT-0026] Missing route to pin _1203_/B in net _0704_.
+[WARNING GRT-0026] Missing route to pin _1203_/Y in net _0705_.
+[WARNING GRT-0026] Missing route to pin _1248_/A in net _0708_.
+[WARNING GRT-0026] Missing route to pin _1224_/A2_N in net _0723_.
+[WARNING GRT-0026] Missing route to pin _1272_/A2 in net _0734_.
+[WARNING GRT-0026] Missing route to pin _1270_/B in net _0768_.
+[WARNING GRT-0026] Missing route to pin _1269_/X in net _0768_.
+[WARNING GRT-0026] Missing route to pin _1270_/Y in net _0769_.
+[WARNING GRT-0026] Missing route to pin _1272_/X in net _0771_.
+[WARNING GRT-0026] Missing route to pin _1292_/X in net _0790_.
+[WARNING GRT-0026] Missing route to pin _1300_/X in net _0797_.
+[WARNING GRT-0026] Missing route to pin _1305_/B1 in net _0800_.
+[WARNING GRT-0026] Missing route to pin _1305_/C1 in net _0801_.
+[WARNING GRT-0026] Missing route to pin _1307_/X in net _0804_.
+[WARNING GRT-0026] Missing route to pin _1337_/Y in net _0832_.
+[WARNING GRT-0026] Missing route to pin _1386_/A in net _0865_.
+[WARNING GRT-0026] Missing route to pin _1385_/X in net _0865_.
+[WARNING GRT-0026] Missing route to pin _1444_/A in net _0895_.
+[WARNING GRT-0026] Missing route to pin _1443_/X in net _0895_.
+[WARNING STA-0166] unknown field nets.
+[WARNING STA-0503] report_checks -group_count is deprecated. Use -group_path_count instead.
+[WARNING STA-0166] unknown field nets.
+[WARNING STA-0503] report_checks -group_count is deprecated. Use -group_path_count instead.
+[WARNING STA-0166] unknown field nets.
+[WARNING STA-0166] unknown field nets.
+[WARNING] Did not save OpenROAD database!

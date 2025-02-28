@@ -1,0 +1,7 @@
+Warning: multi_corner.tcl line 67, unknown field nets.
+Warning: multi_corner.tcl line 67, report_checks -group_count is deprecated. Use -group_path_count instead.
+Warning: multi_corner.tcl line 82, unknown field nets.
+Warning: multi_corner.tcl line 82, report_checks -group_count is deprecated. Use -group_path_count instead.
+Warning: multi_corner.tcl line 94, unknown field nets.
+Warning: multi_corner.tcl line 104, unknown field nets.
+[WARNING] Did not save OpenROAD database!

@@ -1,0 +1,104 @@
+OpenROAD v2.0-19149-g9ef9c213c 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+define_corners Slowest Typical Fastest
+read_liberty -corner Slowest /home/seaky/chip_design/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib
+read_liberty -corner Typical /home/seaky/chip_design/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_liberty -corner Fastest /home/seaky/chip_design/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib
+Using 1e-12 for capacitance...
+Using 1e+03 for resistance...
+Using 1e-09 for time...
+Using 1e+00 for voltage...
+Using 1e-03 for current...
+Using 1e-09 for power...
+Using 1e-06 for distance...
+[INFO]: Reading ODB at '/home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/results/placement/CPU.odb'…
+Reading design constraints file at '/home/seaky/chip_design/OpenLane/designs/CPU_16bit/src/CPU_constraints.sdc'…
+[INFO]: Setting signal min routing layer to: met1 and clock min routing layer to met3. 
+[INFO]: Setting signal max routing layer to: met5 and clock max routing layer to met5. 
+-congestion_iterations 50 -verbose -congestion_report_file /home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/routing/resizer-routing-design-congestion.rpt
+[INFO GRT-0020] Min routing layer: met1
+[INFO GRT-0021] Max routing layer: met5
+[INFO GRT-0022] Global adjustment: 30%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0043] No OR_DEFAULT vias defined.
+[INFO GRT-0088] Layer li1     Track-Pitch = 0.4600  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met1    Track-Pitch = 0.3400  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met2    Track-Pitch = 0.4600  line-2-Via Pitch: 0.3500
+[INFO GRT-0088] Layer met3    Track-Pitch = 0.6800  line-2-Via Pitch: 0.6150
+[INFO GRT-0088] Layer met4    Track-Pitch = 0.9200  line-2-Via Pitch: 1.0400
+[INFO GRT-0088] Layer met5    Track-Pitch = 3.4000  line-2-Via Pitch: 3.1100
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0043] No OR_DEFAULT vias defined.
+[INFO GRT-0004] Blockages: 2506
+[INFO GRT-0019] Found 1 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 180
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+li1        Vertical            0             0          0.00%
+met1       Horizontal      11342          5157          54.53%
+met2       Vertical         8343          4785          42.65%
+met3       Horizontal       5671          3556          37.30%
+met4       Vertical         3366          1809          46.26%
+met5       Horizontal       1125           484          56.98%
+---------------------------------------------------------------
+
+[INFO GRT-0101] Running extra iterations to remove overflow.
+[INFO GRT-0197] Via related to pin nodes: 5353
+[INFO GRT-0198] Via related Steiner nodes: 107
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 6547
+[INFO GRT-0112] Final usage 3D: 22804
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+li1                  0             0            0.00%             0 /  0 /  0
+met1              5157          1565           30.35%             0 /  0 /  0
+met2              4785          1532           32.02%             0 /  0 /  0
+met3              3556            64            1.80%             0 /  0 /  0
+met4              1809             2            0.11%             0 /  0 /  0
+met5               484             0            0.00%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total            15791          3163           20.03%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 36556 um
+[INFO GRT-0014] Routed nets: 1203
+[INFO]: Setting RC values...
+[INFO RSZ-0058] Using max wire length 4508um.
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |      1203
+    final |     +0.0% |       0 |       0 |             0 |         0
+---------------------------------------------------------------------
+Placement Analysis
+---------------------------------
+total displacement          0.0 u
+average displacement        0.0 u
+max displacement            0.0 u
+original HPWL           17886.0 u
+legalized HPWL          18257.8 u
+delta HPWL                    2 %
+
+[INFO DPL-0020] Mirrored 370 instances
+[INFO DPL-0021] HPWL before           18257.8 u
+[INFO DPL-0022] HPWL after            17886.0 u
+[INFO DPL-0023] HPWL delta               -2.0 %
+Setting global connections for newly added cells…
+Writing OpenROAD database to '/home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/15-CPU.odb'…
+Writing netlist to '/home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/15-CPU.nl.v'…
+Writing powered netlist to '/home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/15-CPU.pnl.v'…
+Writing layout to '/home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/15-CPU.def'…
+Writing timing constraints to '/home/seaky/chip_design/OpenLane/designs/CPU_16bit/runs/CPU/tmp/15-CPU.sdc'…
+area_report
+
+===========================================================================
+report_design_area
+============================================================================
+Design area 9593 u^2 44% utilization.
+area_report_end
